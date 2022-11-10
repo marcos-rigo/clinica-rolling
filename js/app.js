@@ -30,7 +30,7 @@ const createAdminNavbar= ()=>{
     navbar.classList.add("navbar","navbar-expand-lg", "sticky-top", "bg-clinica");
     navbar.innerHTML=`
     <div class="container-fluid">
-          <a href="index.html">
+          <a href="home.html">
             <img src="assets/CLíNICA rolling navbar.png" alt="CLINICA ROLLING"  class="" width="100px" height="70px">          
           </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +39,7 @@ const createAdminNavbar= ()=>{
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link" href="">INICIO</a>
+                  <a class="nav-link" href="home.html">INICIO</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="">ADMINISTRACION</a>
@@ -61,7 +61,7 @@ const createUserNavbar= ()=>{
     navbar.classList.add("navbar","navbar-expand-lg", "sticky-top", "bg-clinica");
     navbar.innerHTML=`
     <div class="container-fluid">
-          <a href="index.html">
+          <a href="home.html">
             <img src="assets/CLíNICA rolling navbar.png" alt="CLINICA ROLLING"  class="" width="100px" height="70px">          
           </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,10 +70,10 @@ const createUserNavbar= ()=>{
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link" href="">INICIO</a>
+                  <a class="nav-link" href="home.html">INICIO</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link " href="">ESPECIALIDADES</a>
+                  <a class="nav-link " href="home.html">ESPECIALIDADES</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link " href="">VER ESTUDIOS</a>
