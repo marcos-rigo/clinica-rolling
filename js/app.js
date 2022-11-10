@@ -188,5 +188,5 @@ if(localStorage.getItem('doctors')){
     new Doctor(4,'Maria D. Fuertes','Nutricion','123456',false, ),
     new Doctor(5,'Micaela Bezona','Kinesiologia','123456',true, ),
     ]
-    localStorage.setItem('doctors',JSON.stringify(users))
+    localStorage.setItem('doctors',JSON.stringify(doctors))
 }
