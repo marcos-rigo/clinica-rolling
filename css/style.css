@@ -7,15 +7,19 @@
 .bg-footer{
     background-color:  #089BD3;
 }
+body{
+  background-image: url("../assets/Portada-Proy-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
 
+}
 .portada {
+
     padding-top: 12rem;
     padding-bottom: 6rem;
-    background-image: url("../assets/Portada-Proy-2.png");
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    background-size: cover;
+
      
   }
   
