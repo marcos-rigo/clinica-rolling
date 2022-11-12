@@ -1,0 +1,10 @@
+main{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./../assets/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg");
+    background-size: cover;
+}
+.img-equals{
+    width: 400px;
+    height: 400px;
+}
