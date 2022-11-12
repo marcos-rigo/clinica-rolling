@@ -1,0 +1,81 @@
+*{
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif; 
+}
+.bg-clinica{
+    background-color: #8DE5D8;
+}
+.bg-footer{
+    background-color:  #089BD3;
+}
+body{
+  background-image: url("../assets/Portada-Proy-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+
+}
+.portada {
+
+    padding-top: 12rem;
+    padding-bottom: 6rem;
+
+     
+  }
+  
+  .texto-principal {
+    color: #117C6F;
+    text-align: left;
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  
+  }
+  
+  .texto-secundario{
+    color: #117C6F;
+    text-align: left;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+
+
+  #boton-portada:hover {
+    color:white !important;
+    background-color: #117C6F;
+    border-radius: 40px;
+  }
+
+  #boton-ingreso:hover {
+    color:white !important;
+    background-color: #117C6F;
+    border-radius: 40px;
+  }
+
+
+  @media (min-width: 768px) {
+    header.portada {
+      padding-top: 17rem;
+      padding-bottom: 12.5rem;
+    }
+    header .texto-secundario {
+      font-size: 2.25rem;
+      font-style: italic;
+      line-height: 2.25rem;
+      margin-bottom: 2rem;
+    }
+    header .texto-principal {
+      font-size: 4.5rem;
+      font-weight: 700;
+      line-height: 4.5rem;
+      margin-bottom: 4rem;
+    }
+
+  }
+  
+  
