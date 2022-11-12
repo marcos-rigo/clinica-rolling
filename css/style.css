@@ -7,7 +7,7 @@
 .bg-footer{
     background-color:  #089BD3;
 }
-body{
+#landing-page{
   background-image: url("../assets/Portada-Proy-2.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -20,7 +20,6 @@ body{
     padding-top: 12rem;
     padding-bottom: 6rem;
 
-     
   }
   
   .texto-principal {
@@ -79,3 +78,7 @@ body{
   }
   
   
+#especialidades{
+    background-image: url(/assets/informe-m-dico-electr-nico-conmovedor-del-doctor-de-la-medicina-en-tableta-dna-atención-sanitaria-digitaces-y-conexión-red-154742526.jpg);
+    background-size: cover;
+}
