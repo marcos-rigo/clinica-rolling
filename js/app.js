@@ -99,17 +99,10 @@ const createUserNavbar= ()=>{
 
 const createFooter= () => {
   const div = document.createElement("div")
-  div.classList.add("container-fluid","text-white","p-3","bg-clinica")
+  div.classList.add("container-fluid","text-dark","p-3","bg-clinica")
 
   div.innerHTML=`
-  <div class="mt-3 ">
-            <h3 class="text-center fw-bold">CLÍNICA ROLLING</h3>
-            <p class="text-center">Somos una clínica destinada a la recuperación, mantención y preservación del estado de salud de las personas. <br>
-            Contamos con un equipo altamente capacitado para brindarte la mejor atención personalizada. <br>
-            Atendemos Obras Sociales y consultas particulares.</p>
-            <center><button class="btn btn-block btn-outline-light">Pedir un turno</button></center>
-            <hr>
-        </div>
+  
 
         <div class="row justify-content-around text-center text-md-start">
 
@@ -121,33 +114,33 @@ const createFooter= () => {
             <div class="col-md-2">
                 <ul class="list-unstyled">
                     <li class="fw-bold my-2">Empresa</li>
-                    <li> <a href="#" class="text-decoration-none text-white">Inicio</a> </li>
-                    <li> <a href="#" class="text-decoration-none text-white"> Redes sociales</a></li>
-                    <li> <a href="#" class="text-decoration-none text-white"> Marcas</a> </li>
+                    <li> <a href="#" class="text-decoration-none text-dark">Inicio</a> </li>
+                    <li> <a href="#" class="text-decoration-none text-dark"> Redes sociales</a></li>
+                    <li> <a href="#" class="text-decoration-none text-dark"> Marcas</a> </li>
                 </ul>
             </div>
             <div class="col-md-2">
                 <ul class="list-unstyled">
                     <li class="fw-bold my-2">Sobre nosotros</li>
-                    <li> <a href="#" class="text-decoration-none text-white">Nuestros doctores</a> </li>
-                    <li> <a href="#" class="text-decoration-none text-white">Creadores de la página</a> </li>
+                    <li> <a href="#" class="text-decoration-none text-dark">Nuestros doctores</a> </li>
+                    <li> <a href="#" class="text-decoration-none text-dark">Creadores de la página</a> </li>
 
                 </ul>
             </div>
             <div class="col-md-2">
                 <ul class="list-unstyled">
                     <li class="fw-bold my-2">Soporte</li>
-                    <li> <a href="#" class="text-decoration-none text-white">Contactos</a> </li>
-                    <li> <a href="#" class="text-decoration-none text-white">Solicitud de soporte</a> </li>
+                    <li> <a href="#" class="text-decoration-none text-dark">Contactos</a> </li>
+                    <li> <a href="#" class="text-decoration-none text-dark">Solicitud de soporte</a> </li>
                 </ul>
             </div>
             <div class="col-md-2">
                 <li class="fw-bold my-2 list-unstyled">Síguenos en nuestras redes</li>
                 <ul class="list-unstyled d-flex justify-content-center justify-content-md-start">
-                    <li><a href="#" class="text-white"><i class="fa-brands fa-facebook me-2 fa-1x"></i></a></li>
-                    <li><a href="#" class="text-white"><i class="fa-brands fa-whatsapp mx-2 fa-1x"></i></a></li>
-                    <li><a href="#" class="text-white"><i class="fa-brands fa-youtube mx-2 fa-1x"></i></a></li>
-                    <li><a href="#" class="text-white"><i class="fa-brands fa-instagram mx-2 fa-1x"></i></a></li>
+                    <li><a href="#" class="text-dark"><i class="fa-brands fa-facebook me-2 fa-1x"></i></a></li>
+                    <li><a href="#" class="text-dark"><i class="fa-brands fa-whatsapp mx-2 fa-1x"></i></a></li>
+                    <li><a href="#" class="text-dark"><i class="fa-brands fa-youtube mx-2 fa-1x"></i></a></li>
+                    <li><a href="#" class="text-dark"><i class="fa-brands fa-instagram mx-2 fa-1x"></i></a></li>
                     
                 </ul>
             </div>
@@ -155,7 +148,7 @@ const createFooter= () => {
         <hr>
         <div class="row">
             <div class="col-md-12 text-center pt-2">
-                <p>&copy; 2022 Copyright <a href="#" class="text-white">Clínica Rolling</a></p>
+                <p>&copy; 2022 Copyright <a href="#" class="text-dark">Clínica Rolling</a></p>
             </div>
         </div>
   `
@@ -249,4 +242,5 @@ if(localStorage.getItem('doctors')){
     - Universidad Isabel I, Experto Universitario en Prevención y Readaptación FísicoDeportiva, 2018.
     `,true, ),
     ]
-    localStorage.setItem('doctors',JSON.stringify(doctors))}
+    localStorage.setItem('doctors',JSON.stringify(doctors))
+}
