@@ -158,28 +158,58 @@ const createFooter= () => {
 
 //Creando base de datos de medicos
 
+// class Doctor{
+//   constructor(id,name, especialidad, descripcion, pares, imagen){
+//   this.id = id
+//   this.name = name
+//   this.especialidad = especialidad
+//   this.descripcion = descripcion
+//   this.pares= pares
+//   this.imagen= imagen
+//   }
+// }
+
+
+// let doctors; 
+// if(localStorage.getItem('doctors')){
+//     doctors= JSON.parse(localStorage.getItem('doctors'))
+// }else{
+//     doctors= [
+//     new Doctor(1,'Valentin E. Galarga','Traumatologia','123456',true, "assets/doctor-valentin-image.png"),
+//     new Doctor(2,'Luis Espeche','Kinesiologia','123456',true, ),
+//     new Doctor(3,'Ignacio Talarga','Cardiologia','123456',false, ),
+//     new Doctor(4,'Maria D. Fuertes','Nutricion','123456',false, ),
+//     new Doctor(5,'Micaela Bezona','Kinesiologia','123456',true, ),
+//     ]
+//     localStorage.setItem('doctors',JSON.stringify(doctors))
+// }
+
 class Doctor{
-  constructor(id,name, especialidad, descripcion, pares, imagen){
+  constructor(id,name, especialidad, descripcion, direccion, imagen, telefono,  matricula , turDisponible, turOcupado,publicado){
   this.id = id
   this.name = name
   this.especialidad = especialidad
   this.descripcion = descripcion
-  this.pares= pares
-  this.imagen= imagen
+  this.direccion = direccion 
+  this.imagen=imagen
+  this.telefono = telefono 
+  this.matricula = matricula 
+  this.turDisponible = turDisponible
+  this.turOcupado = turOcupado
+  this.publicado = publicado
   }
 }
-
 
 let doctors; 
 if(localStorage.getItem('doctors')){
     doctors= JSON.parse(localStorage.getItem('doctors'))
 }else{
     doctors= [
-    new Doctor(1,'Valentin E. Galarga','Traumatologia','123456',true, "assets/doctor-valentin-image.png"),
-    new Doctor(2,'Luis Espeche','Kinesiologia','123456',true, ),
-    new Doctor(3,'Ignacio Talarga','Cardiologia','123456',false, ),
-    new Doctor(4,'Maria D. Fuertes','Nutricion','123456',false, ),
-    new Doctor(5,'Micaela Bezona','Kinesiologia','123456',true, ),
+    new Doctor(1,'Valentin E. Galarga','Traumatologia','123456', 'Aguilares', '3875666444', 'descripcion', '15', '5', true),
+    new Doctor(2,'Luis Espeche','Kinesiologia','123456','San Miguel de Tucumán', '3815666444','descripcion', '15', '3', true),
+    new Doctor(3,'Ignacio Talarga','Cardiologia','123456','Aguilares', '3875666444','descripcion', '15', '5', true),
+    new Doctor(4,'Maria D. Fuertes','Nutricion','123456','Aguilares', '3875666444','descripcion', '15', '5', true),
+    new Doctor(5,'Micaela Bezona','Kinesiologia','123456','Aguilares', '3875666444','descripcion', '15', '5', true),
     ]
     localStorage.setItem('doctors',JSON.stringify(doctors))
 }
