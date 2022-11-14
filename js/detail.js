@@ -9,12 +9,12 @@ const doctorDetail = document.createElement('div');
     
 // doctorDetail.id = doctor.id;
 
-doctorDetail.classList.add('row');
+doctorDetail.classList.add('row', "test");
 
 doctorDetail.innerHTML=`
 <div class="row">
 <div class="col-xl-6 col-lg-6">
-<img src="${doctor.image}" class="img-fluid" class=image-doctor alt="Dr Valentin E. Galarga">
+<img src="${doctor.imagen}" class="img-fluid" class=image-doctor alt="Dr Valentin E. Galarga">
 </div>
 <div class="col-xl-6 col-lg-6 mt-5">
 <div class="row">
@@ -25,7 +25,7 @@ doctorDetail.innerHTML=`
             <div class="row">
                 <div class="col">
                     <p class="lead" class="text-center">${doctor.descripcion}</p>
-
+                    <div class="table-responsive"> 
                         <table class="table table-bordered border-primary table-info table-responsive">
                             <thead>
                               <tr>
@@ -81,7 +81,7 @@ doctorDetail.innerHTML=`
                               </tr>
                             </tbody>
                           </table>
-
+                        </div>
                         <button type="button" class="btn btn-info btn-lg">Solicitá tu turno online</button>
                         
                 
