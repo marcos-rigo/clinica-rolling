@@ -158,17 +158,47 @@ const createFooter= () => {
 
 //Creando base de datos de medicos
 
+// class Doctor{
+//   constructor(id,name, especialidad, descripcion, pares, imagen){
+//   this.id = id
+//   this.name = name
+//   this.especialidad = especialidad
+//   this.descripcion = descripcion
+//   this.pares= pares
+//   this.imagen= imagen
+//   }
+// }
+
+
+// let doctors; 
+// if(localStorage.getItem('doctors')){
+//     doctors= JSON.parse(localStorage.getItem('doctors'))
+// }else{
+//     doctors= [
+//     new Doctor(1,'Valentin E. Galarga','Traumatologia','123456',true, "assets/doctor-valentin-image.png"),
+//     new Doctor(2,'Luis Espeche','Kinesiologia','123456',true, ),
+//     new Doctor(3,'Ignacio Talarga','Cardiologia','123456',false, ),
+//     new Doctor(4,'Maria D. Fuertes','Nutricion','123456',false, ),
+//     new Doctor(5,'Micaela Bezona','Kinesiologia','123456',true, ),
+//     ]
+//     localStorage.setItem('doctors',JSON.stringify(doctors))
+// }
+
 class Doctor{
-  constructor(id,name, especialidad, descripcion, pares, imagen){
+  constructor(id,name, especialidad, descripcion, direccion, imagen, telefono,  matricula , turDisponible, turOcupado,publicado){
   this.id = id
   this.name = name
   this.especialidad = especialidad
   this.descripcion = descripcion
-  this.pares= pares
-  this.imagen= imagen
+  this.direccion = direccion 
+  this.imagen=imagen
+  this.telefono = telefono 
+  this.matricula = matricula 
+  this.turDisponible = turDisponible
+  this.turOcupado = turOcupado
+  this.publicado = publicado
   }
 }
-
 
 let doctors; 
 if(localStorage.getItem('doctors')){
@@ -195,7 +225,7 @@ if(localStorage.getItem('doctors')){
     
     MÉDICO DEL EQUIPO DE VOLLEY, CLUB DE AMIGOS VOLLEYBALL (1996-presente).
     
-    ASISTENTE MÉDICO DE CLEVELAND CAVALIERS NBA, CLEVELAND INDIANS MLB Y CLEVELAND BROWNS NFL (1992 - 1995).`,true, "assets/doctor-valentin-image.png"),
+    ASISTENTE MÉDICO DE CLEVELAND CAVALIERS NBA, CLEVELAND INDIANS MLB Y CLEVELAND BROWNS NFL (1992 - 1995).`, 'Aguilares',"assets/doctor-valentin-image.png", '3875666444', 'descripcion', '15', '5', true),
     new Doctor(2,'Luis Espeche','Kinesiologia',`Egresado de la Universidad de Buenos Aires (UBA) en el año 1994, con el tíulo de Licenciado 
     Kinesiólogo Fisiatra, formándose en diferentes técnicas de rehabilitación, y especializándose 
     en  rehabilitación traumatológica y deportiva.
@@ -214,8 +244,8 @@ if(localStorage.getItem('doctors')){
     
     Docente de las Especialidades en Kinesiología Deportiva de la Universidad de Buenos Aires, y de la Diplomatura en 
     Kinesiología Deportiva, Universidad Abierta Interamericana.
-    `,true, ),
-    new Doctor(3,'Ignacio Talarga','Cardiologia','MÉDICO EGRESADO DE LA UBA, CON TITULO DE ESPECIALISTA EN MEDICINA DEL DEPORTE, CARDIOLOGÍA Y OZONOTERAPEUTA POST GRADO UBA    EX MEDICO RESIDENTE DE LA FUNDACION DR, RENÉ FAVALORO.    EX MEDICO DEL SERVICIO DE CARDIOLOGIA HTAL. ARGERICH . JEFE. DR CARLOS BERTOLASI.    EX MEDICO DEL SERVICIO CARDIOLOGÍA HOSPITAL BERNARDINO RIVADAVIA.    DOCENTE CURSO SUPERIOR DE CARDIOLOGÍA COLEGIO MEDICO III MORÓN.    EX DOCENTE CURSO DE ESPECIALISTA MEDICINA DEPORTE GRAL SAN MARTÍN.', false, ),
+    `,'San Miguel de Tucumán',"", '3815666444','descripcion', '15', '3', true),
+    new Doctor(3,'Ignacio Talarga','Cardiologia','MÉDICO EGRESADO DE LA UBA, CON TITULO DE ESPECIALISTA EN MEDICINA DEL DEPORTE, CARDIOLOGÍA Y OZONOTERAPEUTA POST GRADO UBA    EX MEDICO RESIDENTE DE LA FUNDACION DR, RENÉ FAVALORO.    EX MEDICO DEL SERVICIO DE CARDIOLOGIA HTAL. ARGERICH . JEFE. DR CARLOS BERTOLASI.    EX MEDICO DEL SERVICIO CARDIOLOGÍA HOSPITAL BERNARDINO RIVADAVIA.    DOCENTE CURSO SUPERIOR DE CARDIOLOGÍA COLEGIO MEDICO III MORÓN.    EX DOCENTE CURSO DE ESPECIALISTA MEDICINA DEPORTE GRAL SAN MARTÍN.','Aguilares',"", '3875666444','descripcion', '15', '5', true),
     new Doctor(4,'Maria D. Fuertes','Nutricion',`Lic. en Nutricion (UBA) - MN 4394.
     Especialista en Metodología de la Investigación Científica (UNLA).
     Especialista en Estadistica Aplicada a Cs. de la Salud (UBA - FCEyN).
@@ -227,7 +257,7 @@ if(localStorage.getItem('doctors')){
     Nutricionista de la Confederacion Argentina de Voley (FEVA).
     Nutricionista del Área de Ciencias del Deporte de la Asociación Argentina de Tenis (AAT).
     Nutricionista del Plantel de 1º División del Club Atlético Huracán.
-    `,false, ),
+    `,'Aguilares',"", '3875666444','descripcion', '15', '5', true),
     new Doctor(5,'Micaela Bezona','Kinesiologia',`- UST, Magister en Ciencias de la Actividad Física y Deporte, mención Rehabilitación y
     Entrenamiento Deportivo, 2016-2018.
     - Fundación COORED, Diplomado Internacional de Biomecánica aplicada al Deporte,
@@ -240,7 +270,7 @@ if(localStorage.getItem('doctors')){
     - Universidad de Concepción, Diplomado en Ergonomía, 2013-2014.
     - UST, Diplomada en Formación Pedagógica para la Educación Superior, 2011.
     - Universidad Isabel I, Experto Universitario en Prevención y Readaptación FísicoDeportiva, 2018.
-    `,true, ),
+    `,'Aguilares',"", '3875666444','descripcion', '15', '5', true),
     ]
     localStorage.setItem('doctors',JSON.stringify(doctors))
 }
