@@ -99,7 +99,7 @@ const createUserNavbar= ()=>{
 
 const createFooter= () => {
   const div = document.createElement("div")
-  div.classList.add("container-fluid","text-dark","p-3","bg-clinica")
+  div.classList.add("container-fluid","text-dark","p-3","bg-clinica", "position-absolute", "bottom-0")
 
   div.innerHTML=`
   

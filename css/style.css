@@ -1,4 +1,5 @@
 *{
+  box-sizing: border-box;
     font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif; 
 }
 .bg-clinica{
