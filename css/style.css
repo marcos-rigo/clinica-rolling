@@ -1,4 +1,5 @@
 *{
+  box-sizing: border-box;
     font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif; 
 }
 .bg-clinica{
@@ -6,6 +7,9 @@
 }
 .bg-footer{
     background-color:  #089BD3;
+}
+.text-clinica{
+  color: #117C6F;
 }
 #landing-page{
   background-image: url("../assets/Portada-Proy-2.png");
@@ -81,8 +85,4 @@
 #especialidades{
     background-image: url(/assets/informe-m-dico-electr-nico-conmovedor-del-doctor-de-la-medicina-en-tableta-dna-atención-sanitaria-digitaces-y-conexión-red-154742526.jpg);
     background-size: cover;
-}
-.test{
-background-image: url(/assets/background-detail-page.jpg);
-background-size: cover;
 }
