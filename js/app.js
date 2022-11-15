@@ -25,7 +25,7 @@ if(localStorage.getItem('users')){
     localStorage.setItem('users',JSON.stringify(users))
 }
 
-const createAdminNavbar= ()=>{
+export const createAdminNavbar= ()=>{
     const navbar=document.createElement("nav");
     navbar.classList.add("navbar","navbar-expand-lg", "sticky-top", "bg-clinica");
     navbar.innerHTML=`
@@ -56,7 +56,7 @@ const createAdminNavbar= ()=>{
     const header=document.querySelector("header");
     header.appendChild(navbar);
 }
-const createUserNavbar= ()=>{
+export const createUserNavbar= ()=>{
     const navbar=document.createElement("nav");
     navbar.classList.add("navbar","navbar-expand-lg", "sticky-top", "bg-clinica");
     navbar.innerHTML=`
@@ -97,9 +97,9 @@ const createUserNavbar= ()=>{
 
 // FOOTER
 
-const createFooter= () => {
+export const createFooter= () => {
   const div = document.createElement("div")
-  div.classList.add("container-fluid","text-dark","p-3","bg-clinica", "position-absolute", "bottom-0")
+  div.classList.add("container-fluid","text-dark","p-3","bg-clinica")
 
   div.innerHTML=`
   
@@ -244,8 +244,8 @@ if(localStorage.getItem('doctors')){
     
     Docente de las Especialidades en Kinesiología Deportiva de la Universidad de Buenos Aires, y de la Diplomatura en 
     Kinesiología Deportiva, Universidad Abierta Interamericana.
-    `,'San Miguel de Tucumán',"", '3815666444','descripcion', '15', '3', true),
-    new Doctor(3,'Ignacio Talarga','Cardiologia','MÉDICO EGRESADO DE LA UBA, CON TITULO DE ESPECIALISTA EN MEDICINA DEL DEPORTE, CARDIOLOGÍA Y OZONOTERAPEUTA POST GRADO UBA    EX MEDICO RESIDENTE DE LA FUNDACION DR, RENÉ FAVALORO.    EX MEDICO DEL SERVICIO DE CARDIOLOGIA HTAL. ARGERICH . JEFE. DR CARLOS BERTOLASI.    EX MEDICO DEL SERVICIO CARDIOLOGÍA HOSPITAL BERNARDINO RIVADAVIA.    DOCENTE CURSO SUPERIOR DE CARDIOLOGÍA COLEGIO MEDICO III MORÓN.    EX DOCENTE CURSO DE ESPECIALISTA MEDICINA DEPORTE GRAL SAN MARTÍN.','Aguilares',"", '3875666444','descripcion', '15', '5', true),
+    `,'San Miguel de Tucumán',"assets/doctor-luisespeche-image.png", '3815666444','descripcion', '15', '3', true),
+    new Doctor(3,'Ignacio Talarga','Cardiologia','MÉDICO EGRESADO DE LA UBA, CON TITULO DE ESPECIALISTA EN MEDICINA DEL DEPORTE, CARDIOLOGÍA Y OZONOTERAPEUTA POST GRADO UBA    EX MEDICO RESIDENTE DE LA FUNDACION DR, RENÉ FAVALORO.    EX MEDICO DEL SERVICIO DE CARDIOLOGIA HTAL. ARGERICH . JEFE. DR CARLOS BERTOLASI.    EX MEDICO DEL SERVICIO CARDIOLOGÍA HOSPITAL BERNARDINO RIVADAVIA.    DOCENTE CURSO SUPERIOR DE CARDIOLOGÍA COLEGIO MEDICO III MORÓN.    EX DOCENTE CURSO DE ESPECIALISTA MEDICINA DEPORTE GRAL SAN MARTÍN.','Aguilares',"assets/doctor-talarga-image.png", '3875666444','descripcion', '15', '5', true),
     new Doctor(4,'Maria D. Fuertes','Nutricion',`Lic. en Nutricion (UBA) - MN 4394.
     Especialista en Metodología de la Investigación Científica (UNLA).
     Especialista en Estadistica Aplicada a Cs. de la Salud (UBA - FCEyN).
@@ -257,7 +257,7 @@ if(localStorage.getItem('doctors')){
     Nutricionista de la Confederacion Argentina de Voley (FEVA).
     Nutricionista del Área de Ciencias del Deporte de la Asociación Argentina de Tenis (AAT).
     Nutricionista del Plantel de 1º División del Club Atlético Huracán.
-    `,'Aguilares',"", '3875666444','descripcion', '15', '5', true),
+    `,'Aguilares',"assets/doctora-mariafuertes-image.png", '3875666444','descripcion', '15', '5', true),
     new Doctor(5,'Micaela Bezona','Kinesiologia',`- UST, Magister en Ciencias de la Actividad Física y Deporte, mención Rehabilitación y
     Entrenamiento Deportivo, 2016-2018.
     - Fundación COORED, Diplomado Internacional de Biomecánica aplicada al Deporte,
@@ -270,7 +270,7 @@ if(localStorage.getItem('doctors')){
     - Universidad de Concepción, Diplomado en Ergonomía, 2013-2014.
     - UST, Diplomada en Formación Pedagógica para la Educación Superior, 2011.
     - Universidad Isabel I, Experto Universitario en Prevención y Readaptación FísicoDeportiva, 2018.
-    `,'Aguilares',"", '3875666444','descripcion', '15', '5', true),
+    `,'Aguilares',"assets/doctora-bezona-image.png", '3875666444','descripcion', '15', '5', true),
     ]
     localStorage.setItem('doctors',JSON.stringify(doctors))
 }
