@@ -14,10 +14,11 @@
     <script src=""></script>
 </head>
 <body>
-    <header></header>
-    <main>
-        <section id="especialidades" class="pt-5">
-            <h2 class="text-center text-white "> Especialidades </h2>
+    <header>
+    </header>
+    <main id="especialidades">
+        <section  class="pt-5">
+            <h2 class="text-center text-clinica"> Especialidades </h2>
             <div id="home-page" class="container">
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
@@ -27,7 +28,7 @@
                         </button>
                       </h2>
                       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Atendemos consultas sobre todo tipo de lesiones óseas, articulares y musculares. Contamos con especialistas en rodilla, tobillo, columna, cadera, miembro superior, ortopedia infantil y neuro- ortopedia. <br> Doctores:</div>
+                        <div class="accordion-body">Atendemos consultas sobre todo tipo de lesiones óseas, articulares y musculares. Contamos con especialistas en rodilla, tobillo, columna, cadera, miembro superior, ortopedia infantil y neuro- ortopedia. <br> Doctores: <p class="doctores-traumatologia"></p></div>
                       </div>
                     </div>
                     <div class="accordion-item">
@@ -37,7 +38,7 @@
                         </button>
                       </h2>
                       <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">La Rehabilitación está a cargo de un equipo de licenciados en Kinesiología, especializados en las patologías del deporte, como así también en columna, miembro superior e inferior y ortopedia infantil. Los Protocolos de tratamiento son adaptados a cada patología y paciente. Todos los casos son supervisados por el área médica. <br> Doctores:</div>
+                        <div class="accordion-body">La Rehabilitación está a cargo de un equipo de licenciados en Kinesiología, especializados en las patologías del deporte, como así también en columna, miembro superior e inferior y ortopedia infantil. Los Protocolos de tratamiento son adaptados a cada patología y paciente. Todos los casos son supervisados por el área médica. <br> Doctores: <p class="doctores-kinesiologia"></p></div>
                       </div>
                     </div>
                     <div class="accordion-item">
@@ -47,7 +48,7 @@
                         </button>
                       </h2>
                       <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">La nutrición deportiva pone el foco en el concepto de rendimiento. No se trata de curar a nadie, porque se tiene la premisa de que la persona está sana sino, más bien, de que pueda mejorar sus cualidades. Para tener éxito, se hace necesario contar también con el conocimiento de los objetivos de entrenamiento o de fisiología.<br> Doctores:</div>
+                        <div class="accordion-body">La nutrición deportiva pone el foco en el concepto de rendimiento. No se trata de curar a nadie, porque se tiene la premisa de que la persona está sana sino, más bien, de que pueda mejorar sus cualidades. Para tener éxito, se hace necesario contar también con el conocimiento de los objetivos de entrenamiento o de fisiología.<br> Doctores: <p class="doctores-nutricion"></p></div>
                       </div>
                     </div>
                     <div class="accordion-item">
@@ -57,7 +58,7 @@
                         </button>
                       </h2>
                       <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Nuestra misión, visión y valores están encaminados a que el deportista disponga del asesoramiento y los medios necesarios para evitar riesgos en su práctica deportiva o para el control de aquellos deportistas con cardiopatías que continúen con su práctica deportiva.<br> Doctores:</div>
+                        <div class="accordion-body">Nuestra misión, visión y valores están encaminados a que el deportista disponga del asesoramiento y los medios necesarios para evitar riesgos en su práctica deportiva o para el control de aquellos deportistas con cardiopatías que continúen con su práctica deportiva.<br> Doctores: <p class="doctores-cardiologia"></p></div>
                       </div>
                     </div>
                   </div>
@@ -68,33 +69,12 @@
             <h2 class="fw-bold">STAFF</h2>
             <h4>Seleccionar profesional para solicitar su turno</h4>
         <!-- Se podria crear dinamicamente, con un for each al array de medicos y la novela turca para agregar cada div card al padre card group -->
-            <div class="card-group">
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">DR. Mengueche</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                </div>
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    </div>
-                </div>
+           <div class="card-group"> 
               </div>
         </section>
     </main>
     <footer></footer>
-    <script src="js/app.js"></script>
+    <script src="js/home.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>

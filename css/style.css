@@ -82,3 +82,14 @@
     background-image: url(/assets/informe-m-dico-electr-nico-conmovedor-del-doctor-de-la-medicina-en-tableta-dna-atención-sanitaria-digitaces-y-conexión-red-154742526.jpg);
     background-size: cover;
 }
+.test{
+background-image: url(/assets/background-detail-page.jpg);
+background-size: cover;
+}
+.image-doctor {
+  background-image: url(/assets/logo-back-foto-doctor.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+}

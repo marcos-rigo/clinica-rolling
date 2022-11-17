@@ -1,39 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Detalle</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <main class="detailbackground">
-<div class="container  mt-5" id="doctor-container">
+const id = window.location.hash.slice(1);
+console.log(id);
+const doctors2 = JSON.parse(localStorage.getItem('doctors'));
+console.log(doctors2);
+const doctor = doctors2.find(doctor=> doctor.id == id);
+    console.log(doctor);
+    
+const doctorDetail = document.createElement('div');
+    
+// doctorDetail.id = doctor.id;
 
-    <div class="row">
-        <div class="col-xl-6 col-lg-6">
-          <img src="assets/doctor-valentin-image.png" class="img-fluid" class=image-doctor alt="Dr Valentin E. Galarga">
-        </div>
-        <div class="col-xl-6 col-lg-6 mt-5">
-            <div class="row">
-                <div class="col">
-                    <h1 class="text-center">Dr. Valentin E. Galarga</h1>
+doctorDetail.classList.add('row', "test");
+
+doctorDetail.innerHTML=`
+<div class="row">
+<div class="col-xl-6 col-lg-6">
+<div class="image-doctor"> <img src="${doctor.imagen}" class="img-fluid" alt="Dr Valentin E. Galarga"/> </div> 
+</div>
+<div class="col-xl-6 col-lg-6 mt-5">
+<div class="row">
+<div class="col">
+                    <h1 class="text-center">${doctor.name}</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <p class="lead" class="text-center">Médico Cardiólogo Universitario. Facultad de Medicina. 
-                        Universidad de Buenos Aires.
-                        Médico Especialista en Medicina del Trabajo. Facultad de
-                         Medicina. Universidad de Buenos Aires.
-                        Médico especializado en Medicina del Deporte. 
-                        Sociedad Argentina de Medicina del Deporte. Asociación
-                         Médica Argentina.
-                        Médico Universitario Especialista en Medicina del 
-                        Deporte. Facultad de Medicina. Universidad de Buenos Aires.</p>
-
+                    <p class="text-center">${doctor.descripcion}</p>
+                    <div class="table-responsive"> 
                         <table class="table table-bordered border-primary table-info table-responsive">
                             <thead>
                               <tr>
@@ -89,17 +81,14 @@
                               </tr>
                             </tbody>
                           </table>
-
+                        </div>
                         <button type="button" class="btn btn-info btn-lg">Solicitá tu turno online</button>
                         
                 
             </div>
         </div>
     </div>
+    `
+let doctorContainer = document.querySelector('#doctor-container');
 
-</div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <script src="/detail.js"></script>
-</body>
-</html>
+doctorContainer.appendChild(doctorDetail);
