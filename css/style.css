@@ -84,5 +84,15 @@
 }
 .img-admin{
   width: 75px;
-  height: 75px;
+  height: 75px;}
+.test{
+background-image: url(/assets/background-detail-page.jpg);
+background-size: cover;
+}
+.image-doctor {
+  background-image: url(/assets/logo-back-foto-doctor.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
 }

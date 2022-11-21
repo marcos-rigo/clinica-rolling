@@ -25,138 +25,7 @@ if(localStorage.getItem('users')){
     localStorage.setItem('users',JSON.stringify(users))
 }
 
-const createAdminNavbar= ()=>{
-    const navbar=document.createElement("nav");
-    navbar.classList.add("navbar","navbar-expand-lg", "sticky-top", "bg-clinica");
-    navbar.innerHTML=`
-    <div class="container-fluid">
-          <a href="home.html">
-            <img src="assets/CLíNICA rolling navbar.png" alt="CLINICA ROLLING"  class="" width="100px" height="70px">          
-          </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" href="home.html">INICIO</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="">ADMINISTRACION</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="">SOPORTE</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn btn-sm btn-outline-danger" href="">CERRAR SESION</a>
-                </li>
-            </div>
-          </div>  
-    `
-    const header=document.querySelector("header");
-    header.appendChild(navbar);
-}
-const createUserNavbar= ()=>{
-    const navbar=document.createElement("nav");
-    navbar.classList.add("navbar","navbar-expand-lg", "sticky-top", "bg-clinica");
-    navbar.innerHTML=`
-    <div class="container-fluid">
-          <a href="home.html">
-            <img src="assets/CLíNICA rolling navbar.png" alt="CLINICA ROLLING"  class="" width="100px" height="70px">          
-          </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" href="home.html">INICIO</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link " href="home.html">ESPECIALIDADES</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link " href="">VER ESTUDIOS</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link " href="">NOVEDADES</a>
-                </li>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" minlength="2" maxlength="20" placeholder="Busca tu médico" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
-                <li class="nav-item">
-                  <a class="nav-link " href="">CERRAR SESION</a>
-                </li>
-            </div>
-          </div> 
-    `;
-    const header=document.querySelector("header");
-    header.appendChild(navbar);
-}
-
-// FOOTER
-
-const createFooter= () => {
-  const div = document.createElement("div")
-  div.classList.add("container-fluid","text-dark","p-3","bg-clinica")
-
-  div.innerHTML=`
-  
-
-        <div class="row justify-content-around text-center text-md-start">
-
-            <div class="col-md-2 text-center">
-            <a href="index.html">
-            <img src="assets/CLíNICA rolling navbar.png" alt="CLINICA ROLLING"  class="" width="180px" height="160px">          
-            </a>
-            </div>
-            <div class="col-md-2">
-                <ul class="list-unstyled">
-                    <li class="fw-bold my-2">Empresa</li>
-                    <li> <a href="#" class="text-decoration-none text-dark">Inicio</a> </li>
-                    <li> <a href="#" class="text-decoration-none text-dark"> Redes sociales</a></li>
-                    <li> <a href="#" class="text-decoration-none text-dark"> Marcas</a> </li>
-                </ul>
-            </div>
-            <div class="col-md-2">
-                <ul class="list-unstyled">
-                    <li class="fw-bold my-2">Sobre nosotros</li>
-                    <li> <a href="#" class="text-decoration-none text-dark">Nuestros doctores</a> </li>
-                    <li> <a href="#" class="text-decoration-none text-dark">Creadores de la página</a> </li>
-
-                </ul>
-            </div>
-            <div class="col-md-2">
-                <ul class="list-unstyled">
-                    <li class="fw-bold my-2">Soporte</li>
-                    <li> <a href="#" class="text-decoration-none text-dark">Contactos</a> </li>
-                    <li> <a href="#" class="text-decoration-none text-dark">Solicitud de soporte</a> </li>
-                </ul>
-            </div>
-            <div class="col-md-2">
-                <li class="fw-bold my-2 list-unstyled">Síguenos en nuestras redes</li>
-                <ul class="list-unstyled d-flex justify-content-center justify-content-md-start">
-                    <li><a href="#" class="text-dark"><i class="fa-brands fa-facebook me-2 fa-1x"></i></a></li>
-                    <li><a href="#" class="text-dark"><i class="fa-brands fa-whatsapp mx-2 fa-1x"></i></a></li>
-                    <li><a href="#" class="text-dark"><i class="fa-brands fa-youtube mx-2 fa-1x"></i></a></li>
-                    <li><a href="#" class="text-dark"><i class="fa-brands fa-instagram mx-2 fa-1x"></i></a></li>
-                    
-                </ul>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-md-12 text-center pt-2">
-                <p>&copy; 2022 Copyright <a href="#" class="text-dark">Clínica Rolling</a></p>
-            </div>
-        </div>
-  `
-  const footer = document.querySelector("footer")
-  footer.appendChild(div)
-}
-
-
+//Constructor de Doctores
 
 class Doctor{
   constructor(id,name, especialidad, descripcion, direccion, imagen, telefono,  matricula , turDisponible, turOcupado,publicado){
@@ -173,7 +42,7 @@ class Doctor{
   this.publicado = publicado
   }
 }
-
+//Setteando base de datos de medicos
 let doctors; 
 if(localStorage.getItem('doctors')){
     doctors= JSON.parse(localStorage.getItem('doctors'))
@@ -218,8 +87,8 @@ if(localStorage.getItem('doctors')){
     
     Docente de las Especialidades en Kinesiología Deportiva de la Universidad de Buenos Aires, y de la Diplomatura en 
     Kinesiología Deportiva, Universidad Abierta Interamericana.
-    `,'San Miguel de Tucumán',"", '3815666444','descripcion', '15', '3', true),
-    new Doctor(3,'Ignacio Talarga','Cardiologia','MÉDICO EGRESADO DE LA UBA, CON TITULO DE ESPECIALISTA EN MEDICINA DEL DEPORTE, CARDIOLOGÍA Y OZONOTERAPEUTA POST GRADO UBA    EX MEDICO RESIDENTE DE LA FUNDACION DR, RENÉ FAVALORO.    EX MEDICO DEL SERVICIO DE CARDIOLOGIA HTAL. ARGERICH . JEFE. DR CARLOS BERTOLASI.    EX MEDICO DEL SERVICIO CARDIOLOGÍA HOSPITAL BERNARDINO RIVADAVIA.    DOCENTE CURSO SUPERIOR DE CARDIOLOGÍA COLEGIO MEDICO III MORÓN.    EX DOCENTE CURSO DE ESPECIALISTA MEDICINA DEPORTE GRAL SAN MARTÍN.','Aguilares',"", '3875666444','descripcion', '15', '5', true),
+    `,'San Miguel de Tucumán',"assets/doctor-luisespeche-image.png", '3815666444','descripcion', '15', '3', true),
+    new Doctor(3,'Ignacio Talarga','Cardiologia','MÉDICO EGRESADO DE LA UBA, CON TITULO DE ESPECIALISTA EN MEDICINA DEL DEPORTE, CARDIOLOGÍA Y OZONOTERAPEUTA POST GRADO UBA    EX MEDICO RESIDENTE DE LA FUNDACION DR, RENÉ FAVALORO.    EX MEDICO DEL SERVICIO DE CARDIOLOGIA HTAL. ARGERICH . JEFE. DR CARLOS BERTOLASI.    EX MEDICO DEL SERVICIO CARDIOLOGÍA HOSPITAL BERNARDINO RIVADAVIA.    DOCENTE CURSO SUPERIOR DE CARDIOLOGÍA COLEGIO MEDICO III MORÓN.    EX DOCENTE CURSO DE ESPECIALISTA MEDICINA DEPORTE GRAL SAN MARTÍN.','Aguilares',"assets/doctor-talarga-image.png", '3875666444','descripcion', '15', '5', true),
     new Doctor(4,'Maria D. Fuertes','Nutricion',`Lic. en Nutricion (UBA) - MN 4394.
     Especialista en Metodología de la Investigación Científica (UNLA).
     Especialista en Estadistica Aplicada a Cs. de la Salud (UBA - FCEyN).
@@ -231,7 +100,7 @@ if(localStorage.getItem('doctors')){
     Nutricionista de la Confederacion Argentina de Voley (FEVA).
     Nutricionista del Área de Ciencias del Deporte de la Asociación Argentina de Tenis (AAT).
     Nutricionista del Plantel de 1º División del Club Atlético Huracán.
-    `,'Aguilares',"", '3875666444','descripcion', '15', '5', true),
+    `,'Aguilares',"assets/doctora-mariafuertes-image.png", '3875666444','descripcion', '15', '5', true),
     new Doctor(5,'Micaela Bezona','Kinesiologia',`- UST, Magister en Ciencias de la Actividad Física y Deporte, mención Rehabilitación y
     Entrenamiento Deportivo, 2016-2018.
     - Fundación COORED, Diplomado Internacional de Biomecánica aplicada al Deporte,
@@ -244,7 +113,9 @@ if(localStorage.getItem('doctors')){
     - Universidad de Concepción, Diplomado en Ergonomía, 2013-2014.
     - UST, Diplomada en Formación Pedagógica para la Educación Superior, 2011.
     - Universidad Isabel I, Experto Universitario en Prevención y Readaptación FísicoDeportiva, 2018.
-    `,'Aguilares',"", '3875666444','descripcion', '15', '5', true),
+    `,'Aguilares',"assets/doctora-bezona-image.png", '3875666444','descripcion', '15', '5', true),
     ]
     localStorage.setItem('doctors',JSON.stringify(doctors))
 }
+import {createFooter} from "./helper-functions.js";
+createFooter()
