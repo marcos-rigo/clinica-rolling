@@ -156,33 +156,7 @@ const createFooter= () => {
   footer.appendChild(div)
 }
 
-//Creando base de datos de medicos
 
-// class Doctor{
-//   constructor(id,name, especialidad, descripcion, pares, imagen){
-//   this.id = id
-//   this.name = name
-//   this.especialidad = especialidad
-//   this.descripcion = descripcion
-//   this.pares= pares
-//   this.imagen= imagen
-//   }
-// }
-
-
-// let doctors; 
-// if(localStorage.getItem('doctors')){
-//     doctors= JSON.parse(localStorage.getItem('doctors'))
-// }else{
-//     doctors= [
-//     new Doctor(1,'Valentin E. Galarga','Traumatologia','123456',true, "assets/doctor-valentin-image.png"),
-//     new Doctor(2,'Luis Espeche','Kinesiologia','123456',true, ),
-//     new Doctor(3,'Ignacio Talarga','Cardiologia','123456',false, ),
-//     new Doctor(4,'Maria D. Fuertes','Nutricion','123456',false, ),
-//     new Doctor(5,'Micaela Bezona','Kinesiologia','123456',true, ),
-//     ]
-//     localStorage.setItem('doctors',JSON.stringify(doctors))
-// }
 
 class Doctor{
   constructor(id,name, especialidad, descripcion, direccion, imagen, telefono,  matricula , turDisponible, turOcupado,publicado){
