@@ -37,7 +37,7 @@ const login = (e)=>{
   if(userFound && userFound.password===password){
     localStorage.setItem('userInfo',JSON.stringify(userFound));
     console.log(userFound);
-    window.location.assign(window.location.origin + '/carrito.html');
+    window.location.assign(window.location.origin + '/home.html');
  
   }else{
     alertMessage('credenciales invalidas','form')

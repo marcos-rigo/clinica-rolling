@@ -18,7 +18,7 @@ doctorDetail.classList.add('row', "test");
 doctorDetail.innerHTML=`
 <div class="row">
 <div class="col-xl-6 col-lg-6">
-<div class="image-doctor"> <img src="${doctor.imagen}" class="card-imagen" alt="Dr Valentin E. Galarga"/> </div> 
+<div class="image-doctor"> <img src="${doctor.imagen}" class="img-fluid" alt="Dr Valentin E. Galarga"/> </div> 
 </div>
 <div class="col-xl-6 col-lg-6 mt-5">
 <div class="row">
