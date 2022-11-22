@@ -1,3 +1,6 @@
+
+
+
 class Doctor{
   constructor(id,name, especialidad, descripcion, direccion, imagen, telefono,  matricula , turDisponible, turOcupado,publicado){
   this.id = id

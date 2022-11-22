@@ -1,4 +1,4 @@
-import {createFooter, createUserNavbar, createAdminNavbar} from "./app.js";
+import {createFooter, createUserNavbar, createAdminNavbar} from "./helper-functions.js";
 const doctors= JSON.parse(localStorage.getItem('doctors'))
 createFooter()
 createUserNavbar()
