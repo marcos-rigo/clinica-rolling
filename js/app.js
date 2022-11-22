@@ -1,3 +1,5 @@
+import {createFooter} from "./helper-functions.js";
+createFooter()
 //Base de datos de usuarios, diferenciando administradores de pacientes
 class User{
     constructor(id,name, age, email, password, admin){
@@ -117,5 +119,3 @@ if(localStorage.getItem('doctors')){
     ]
     localStorage.setItem('doctors',JSON.stringify(doctors))
 }
-import {createFooter} from "./helper-functions.js";
-createFooter()
