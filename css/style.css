@@ -96,3 +96,14 @@ background-size: cover;
   background-attachment: scroll;
   background-position: center center;
 }
+.card-effect:hover{
+  
+    transform: translateY(-15px);
+    transition: all 0.5s ease-in-out;
+
+
+}
+.card-imagen{
+  width: 286px;
+  height: 345px;
+}
