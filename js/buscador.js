@@ -10,7 +10,7 @@ medicos=doctors.map(medico=>{
   const cardBuscador=document.createElement("div")
     cardBuscador.classList.add("card-buscador","text-center","hide-buscador")
         cardBuscador.innerHTML=`
-        <a class="body-busqueda"href="test.html#${medico.id}">${medico.name}</a>
+        <a class="body-busqueda"href="detail-doctor.html#${medico.id}">${medico.name}</a>
         `
         buscadorContainer.appendChild(cardBuscador)
         return{name:medico.name,
