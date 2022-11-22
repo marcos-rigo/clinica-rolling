@@ -104,3 +104,15 @@ background-size: cover;
   width: 286px;
   height: 345px;
 }
+.search
+{
+    width: 200px;
+    /* background: none; */
+    border: 1px solid #117C6F;
+    /* color: #117C6F; */
+    border-radius: 6px;
+}
+.search:focus {
+    outline: none;
+    border-color: #117C6F;
+}

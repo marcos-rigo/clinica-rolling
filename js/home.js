@@ -57,3 +57,5 @@ cardiologos.forEach(cardiologo=>{
     document.querySelector(".doctores-cardiologia").appendChild(newAnchor)
 })
 
+import { buscar } from "/js/buscador.js";
+buscar()
