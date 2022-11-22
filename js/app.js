@@ -70,7 +70,7 @@ if(localStorage.getItem('doctors')){
     
     MÉDICO DEL EQUIPO DE VOLLEY, CLUB DE AMIGOS VOLLEYBALL (1996-presente).
     
-    ASISTENTE MÉDICO DE CLEVELAND CAVALIERS NBA, CLEVELAND INDIANS MLB Y CLEVELAND BROWNS NFL (1992 - 1995).`, 'Aguilares',"assets/doctor-valentin-image.png", '3875666444', 'descripcion', '15', '5', true),
+    ASISTENTE MÉDICO DE CLEVELAND CAVALIERS NBA, CLEVELAND INDIANS MLB Y CLEVELAND BROWNS NFL (1992 - 1995).`, 'Aguilares',"assets/doctor-valentin-image.png", '3875666444', '4444', '15', '5', true),
     new Doctor(2,'Luis Espeche','Kinesiologia',`Egresado de la Universidad de Buenos Aires (UBA) en el año 1994, con el tíulo de Licenciado 
     Kinesiólogo Fisiatra, formándose en diferentes técnicas de rehabilitación, y especializándose 
     en  rehabilitación traumatológica y deportiva.
@@ -89,8 +89,8 @@ if(localStorage.getItem('doctors')){
     
     Docente de las Especialidades en Kinesiología Deportiva de la Universidad de Buenos Aires, y de la Diplomatura en 
     Kinesiología Deportiva, Universidad Abierta Interamericana.
-    `,'San Miguel de Tucumán',"assets/doctor-luisespeche-image.png", '3815666444','descripcion', '15', '3', true),
-    new Doctor(3,'Ignacio Talarga','Cardiologia','MÉDICO EGRESADO DE LA UBA, CON TITULO DE ESPECIALISTA EN MEDICINA DEL DEPORTE, CARDIOLOGÍA Y OZONOTERAPEUTA POST GRADO UBA    EX MEDICO RESIDENTE DE LA FUNDACION DR, RENÉ FAVALORO.    EX MEDICO DEL SERVICIO DE CARDIOLOGIA HTAL. ARGERICH . JEFE. DR CARLOS BERTOLASI.    EX MEDICO DEL SERVICIO CARDIOLOGÍA HOSPITAL BERNARDINO RIVADAVIA.    DOCENTE CURSO SUPERIOR DE CARDIOLOGÍA COLEGIO MEDICO III MORÓN.    EX DOCENTE CURSO DE ESPECIALISTA MEDICINA DEPORTE GRAL SAN MARTÍN.','Aguilares',"assets/doctor-talarga-image.png", '3875666444','descripcion', '15', '5', true),
+    `,'San Miguel de Tucumán',"assets/doctor-luisespeche-image.png", '3815666444','7777', '15', '3', true),
+    new Doctor(3,'Ignacio Talarga','Cardiologia','MÉDICO EGRESADO DE LA UBA, CON TITULO DE ESPECIALISTA EN MEDICINA DEL DEPORTE, CARDIOLOGÍA Y OZONOTERAPEUTA POST GRADO UBA    EX MEDICO RESIDENTE DE LA FUNDACION DR, RENÉ FAVALORO.    EX MEDICO DEL SERVICIO DE CARDIOLOGIA HTAL. ARGERICH . JEFE. DR CARLOS BERTOLASI.    EX MEDICO DEL SERVICIO CARDIOLOGÍA HOSPITAL BERNARDINO RIVADAVIA.    DOCENTE CURSO SUPERIOR DE CARDIOLOGÍA COLEGIO MEDICO III MORÓN.    EX DOCENTE CURSO DE ESPECIALISTA MEDICINA DEPORTE GRAL SAN MARTÍN.','Aguilares',"assets/doctor-talarga-image.png", '3875666444','1234', '15', '5', true),
     new Doctor(4,'Maria D. Fuertes','Nutricion',`Lic. en Nutricion (UBA) - MN 4394.
     Especialista en Metodología de la Investigación Científica (UNLA).
     Especialista en Estadistica Aplicada a Cs. de la Salud (UBA - FCEyN).
@@ -102,7 +102,7 @@ if(localStorage.getItem('doctors')){
     Nutricionista de la Confederacion Argentina de Voley (FEVA).
     Nutricionista del Área de Ciencias del Deporte de la Asociación Argentina de Tenis (AAT).
     Nutricionista del Plantel de 1º División del Club Atlético Huracán.
-    `,'Aguilares',"assets/doctora-mariafuertes-image.png", '3875666444','descripcion', '15', '5', true),
+    `,'Aguilares',"assets/doctora-mariafuertes-image.png", '3875666444','6666', '15', '5', true),
     new Doctor(5,'Micaela Bezona','Kinesiologia',`- UST, Magister en Ciencias de la Actividad Física y Deporte, mención Rehabilitación y
     Entrenamiento Deportivo, 2016-2018.
     - Fundación COORED, Diplomado Internacional de Biomecánica aplicada al Deporte,
@@ -115,7 +115,7 @@ if(localStorage.getItem('doctors')){
     - Universidad de Concepción, Diplomado en Ergonomía, 2013-2014.
     - UST, Diplomada en Formación Pedagógica para la Educación Superior, 2011.
     - Universidad Isabel I, Experto Universitario en Prevención y Readaptación FísicoDeportiva, 2018.
-    `,'Aguilares',"assets/doctora-bezona-image.png", '3875666444','descripcion', '15', '5', true),
+    `,'Aguilares',"assets/doctora-bezona-image.png", '3875666444','2222', '15', '5', true),
     ]
     localStorage.setItem('doctors',JSON.stringify(doctors))
 }

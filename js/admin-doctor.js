@@ -92,6 +92,9 @@ const fillFields = (idToEdit) => {
 }
 
 const editDoctor = (idToEdit) => {
+  console.log(idToEdit)
+
+  const doctor = doctors.find(doctor => doctor.id == idToEdit);
   const name = document.getElementById('nombre-medico-edit').value;
     const especialidad = document.getElementById("especialidad-medico-edit").value;
     const descripcion = document.getElementById("descripcion-medico-edit").value;
@@ -99,8 +102,10 @@ const editDoctor = (idToEdit) => {
     const telefono = document.getElementById("telefono-medico-edit").value;
     const matricula = document.getElementById("matricula-medico-edit").value;
     const turDisponible = document.getElementById("turnosDispo-medico-edit").value;
+    const imagen = doctor.imagen
+    const id = doctor.id
   const doctorsUpdated = doctors.filter(doctor => doctor.id != idToEdit);
-  const doctorUpdated = new Doctor(new Date().getTime(), name,  especialidad, descripcion, direccion, "", telefono,  matricula,  turDisponible, "", "");
+  const doctorUpdated = new Doctor(id, name,  especialidad, descripcion, direccion, imagen,  telefono,  matricula,  turDisponible);
   doctorsUpdated.push(doctorUpdated);
   localStorage.setItem("doctors", JSON.stringify(doctorsUpdated));
 }
