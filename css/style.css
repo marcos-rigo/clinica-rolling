@@ -139,3 +139,7 @@ background-size: cover;
   display: none;
 }
 
+main a:hover{
+  cursor: pointer;
+
+}
