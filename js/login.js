@@ -1,4 +1,3 @@
-import { navbar } from "../12-helperFunctions.js"
 
 class User{
   constructor(id,name, age, email, password, admin){
@@ -33,6 +32,7 @@ const login = (e)=>{
    e.preventDefault();
    const email = document.getElementById('values-email-login').value;
   const password = document.getElementById('values-password-login').value;
+  const users= JSON.parse(localStorage.getItem('users'))
   const userFound = users.find(user=>user.email===email);
   if(userFound && userFound.password===password){
     localStorage.setItem('userInfo',JSON.stringify(userFound));
@@ -141,5 +141,3 @@ const validateFieldsRegister = (name, age, email, password, password2)=>{
 // // }
 // // Object.keys(errores) []
 // // Object.values(errores) ['hola','chau']
-
-navbar()

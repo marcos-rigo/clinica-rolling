@@ -85,7 +85,7 @@
 .img-admin{
   width: 75px;
   height: 75px;}
-.test{
+#background-detail{
 background-image: url(/assets/background-detail-page.jpg);
 background-size: cover;
 }
@@ -107,3 +107,35 @@ background-size: cover;
   width: 286px;
   height: 345px;
 }
+.search
+{
+    width: 200px;
+    background: none;
+    border: 1px solid #117C6F;
+    /* color: #117C6F; */
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.search:focus {
+    outline: none;
+    border-color: #117C6F;
+}
+
+.buscador{
+  flex-direction: column;
+}
+.user-cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+  gap:  .25rem;
+  margin-top: 1rem;
+}
+.card-buscador{
+  border: 1px solid black;
+  background-color: white;
+}
+
+.hide-buscador{
+  display: none;
+}
+
