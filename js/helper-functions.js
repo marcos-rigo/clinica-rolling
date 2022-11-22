@@ -58,21 +58,18 @@ export const createUserNavbar= ()=>{
                   <a class="nav-link " href="">NOVEDADES</a>
                 </li>
                 <li class="nav-item">
-    <div class="searcher">
-            <div class="dropdown">
-                <input type="text" placeholder="BUSCA TU MÉDICO" class="search " onkeyup="buscar()" id="buscador-navbar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="dropdown-menu pt-0 responsive-favs" id="lista-busqueda" aria-labelledby="search-bar-id" style="min-width: 300px ;">
+                <div class="d-flex flex-column buscador" >
+                    <label for="search"></label>
+                    <input class="form-control me-2" type="search" minlength="2" maxlength="20" placeholder="Busca tu médico" data-search>
+                    <div class="user-cards">
                 </div>
-        </div>
-        </li>
+                </li>
                 <li class="nav-item">
                   <a class="nav-link " href="">CERRAR SESION</a>
                 </li>
             </div>
           </div> 
     `;
-
-   
     const header=document.querySelector("header");
     header.appendChild(navbar);
 }

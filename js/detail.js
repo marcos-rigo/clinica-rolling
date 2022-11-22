@@ -18,7 +18,7 @@ doctorDetail.classList.add('row', "test");
 doctorDetail.innerHTML=`
 <div class="row">
 <div class="col-xl-6 col-lg-6">
-<div class="image-doctor"> <img src="${doctor.imagen}" class="img-fluid" alt="Dr Valentin E. Galarga"/> </div> 
+<div class="image-doctor"> <img src="${doctor.imagen}" class="img-fluid" alt="${doctor.name}"/> </div> 
 </div>
 <div class="col-xl-6 col-lg-6 mt-5">
 <div class="row">
@@ -28,8 +28,10 @@ doctorDetail.innerHTML=`
             </div>    
             <div class="row">
                 <div class="col">
-                    <p class="text-center">${doctor.descripcion}</p>
-                    <div class="table-responsive"> 
+                    <div class="bg-body ">                
+                    <p class=" lh-base">${doctor.descripcion}</p>
+                    </div>
+                    <div class="table-responsive-xl "> 
                         <table class="table table-bordered border-primary table-info table-responsive">
                             <thead>
                               <tr>

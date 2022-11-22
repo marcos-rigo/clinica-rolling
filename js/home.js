@@ -3,27 +3,29 @@ const doctors= JSON.parse(localStorage.getItem('doctors'))
 createFooter()
 createUserNavbar()
 
+
 doctors.forEach(doctor=> {
-    const cardsDiv=document.createElement("div")
-    cardsDiv.classList.add("card-group", "row","mx-auto","card-effect")
-    cardsDiv.innerHTML=`
-    <div class="col-xl-6 col-lg-6 col-md-6 col-xs-12 ">
-    <div class="card shadow rounded m-3" style="width: 18rem;">
-                  <img src="${doctor.imagen}" class="card-img-top card-imagen" alt="${doctor.name}">
-                  <div class="card-body d-flex flex-column justify-content-center">
-                    <h5 class="card-title">${doctor.name}</h5>
-                    <p class="card-text">Para reservar un turno con ${doctor.name} en ${doctor.especialidad}, haz click en el siguiente boton</p>
-                    <a class="btn btn-success" href="detail-doctor.html#${doctor.id}">Reservar turno</a>
-                    </div>
-                </div>
-            </div>
-    `
-    document.querySelector(".card-group").appendChild(cardsDiv)
+    if(doctor.publicado){
+        const cardsDiv=document.createElement("div")
+        cardsDiv.classList.add("card-group", "row","mx-auto","card-effect")
+        cardsDiv.innerHTML=`
+        <div class="col-xl-6 col-lg-6 col-md-6 col-xs-12 ">
+        <div class="card shadow rounded m-3" style="width: 18rem;">
+        <img src="${doctor.imagen}" class="card-img-top card-imagen" alt="${doctor.name}">
+        <div class="card-body d-flex flex-column justify-content-center">
+        <h5 class="card-title">${doctor.name}</h5>
+        <p class="card-text">Para reservar un turno con ${doctor.name} en ${doctor.especialidad}, haz click en el siguiente boton</p>
+        <a class="btn btn-success" href="detail-doctor.html#${doctor.id}">Reservar turno</a>
+        </div>
+        </div>
+        </div>
+        `
+        document.querySelector(".card-group").appendChild(cardsDiv)
+    }
 });
 
 const traumatologos = doctors.filter(doctor=>doctor.especialidad==="Traumatologia");
 const kinesiologos = doctors.filter(doctor=>doctor.especialidad==="Kinesiologia");
-console.log(kinesiologos);
 const nutricionistas = doctors.filter(doctor=>doctor.especialidad==="Nutricion");
 const cardiologos = doctors.filter(doctor=>doctor.especialidad==="Cardiologia");
 
@@ -57,5 +59,5 @@ cardiologos.forEach(cardiologo=>{
     document.querySelector(".doctores-cardiologia").appendChild(newAnchor)
 })
 
-import { buscar } from "/js/buscador.js";
-buscar()
+// import { buscar } from "/js/buscador.js";
+// buscar()
