@@ -1,0 +1,16 @@
+body{
+    background-color: #8DE5D8;
+}
+h1{
+    text-align: center;
+    color: blueviolet;
+    font-style: oblique;
+}
+h3{
+    color: blueviolet;
+    font-style: oblique;
+}
+form{
+    color: blueviolet;
+    font-family:'Source Sans Pro', Arial, Helvetica, sans-serif;
+}
