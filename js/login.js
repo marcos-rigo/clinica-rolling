@@ -1,11 +1,12 @@
 class User{
-  constructor(id,name, age, email, password, admin){
+  constructor(id,name, age, email, password, admin,dni){
     this.id = id
     this.name = name
     this.age = age
     this.email = email
     this.password = password,
     this.admin = admin
+    this.dni=dni
   }
 }
 const users= JSON.parse(localStorage.getItem('users'))
