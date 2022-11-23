@@ -29,8 +29,8 @@ const users= JSON.parse(localStorage.getItem('users'))
 
 
 const login = (e)=>{
-   e.preventDefault();
-   const email = document.getElementById('values-email-login').value;
+  e.preventDefault();
+  const email = document.getElementById('values-email-login').value;
   const password = document.getElementById('values-password-login').value;
   const users= JSON.parse(localStorage.getItem('users'))
   const userFound = users.find(user=>user.email===email);
