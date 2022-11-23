@@ -1,0 +1,17 @@
+#portada-admin{
+    background-image: url(/assets/portada-admin-doctor.jpg);
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#titulo-admin-doctor{
+    color: white;
+    text-align: left;
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
