@@ -1,4 +1,3 @@
-
 class User{
   constructor(id,name, age, email, password, admin){
     this.id = id
@@ -9,21 +8,21 @@ class User{
     this.admin = admin
   }
 }
-
-let users; 
-if(localStorage.getItem('users')){
-  users= JSON.parse(localStorage.getItem('users'))
-}else{
-  users= [
-    new User(1,'Martin Fanlo',32,'martin@gmail.com','123456',true),
-    new User(2,'Javier Robles',44,'javier@gmail.com','1234567',true),
-    new User(3,'Facu Trejo',25,'facu@gmail.com','12345678',true),
-    new User(4,'Luis Ledesma',41,'luis@gmail.com','123456789',true),
-    new User(5,'Valentin Quiroga',26,'valentin@gmail.com','1234567891',true),
-    new User(6,'Marcos Rigo',31,'marcos@gmail.com','12345678912',true),
-  ]
-  localStorage.setItem('users',JSON.stringify(users))
-}
+const users= JSON.parse(localStorage.getItem('users'))
+// let users; 
+// if(localStorage.getItem('users')){
+//   users= JSON.parse(localStorage.getItem('users'))
+// }else{
+//   users= [
+//     new User(1,'Martin Fanlo',32,'martin@gmail.com','123456',true),
+//     new User(2,'Javier Robles',44,'javier@gmail.com','1234567',true),
+//     new User(3,'Facu Trejo',25,'facu@gmail.com','12345678',true),
+//     new User(4,'Luis Ledesma',41,'luis@gmail.com','123456789',true),
+//     new User(5,'Valentin Quiroga',26,'valentin@gmail.com','1234567891',true),
+//     new User(6,'Marcos Rigo',31,'marcos@gmail.com','12345678912',true),
+//   ]
+//   localStorage.setItem('users',JSON.stringify(users))
+// }
 
 
 
@@ -70,7 +69,7 @@ const register = (e)=>{
     const usersLS = JSON.parse(localStorage.getItem('users'));
     usersLS.push(newUser);
     localStorage.setItem('users',JSON.stringify(usersLS))
-    window.location.assign(window.location.origin + '/carrito.html');
+    window.location.assign(window.location.origin + '/home.html');
   }else{
     alertMessage('El formato es inválido','#register-body')
   }

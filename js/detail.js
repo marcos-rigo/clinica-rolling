@@ -88,7 +88,7 @@ doctorDetail.innerHTML=`
                             </tbody>  
                           </table>  
                         </div>  
-                        <button type="button" class="btn btn-info btn-lg">Solicitá tu turno online</button>
+                        <button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal" data-bs-target="#turn-modal">Solicitá tu turno online</button>
                         
                 
             </div>            
@@ -99,3 +99,4 @@ let doctorContainer = document.querySelector('#doctor-container');
 
 doctorContainer.appendChild(doctorDetail);
 
+// A la tabla se le podria poner colores dependiendo si el turno esta libre y en el modal de solicita tu turno rellenar los campos teniendo en cuenta los datos del usuario loggeado
