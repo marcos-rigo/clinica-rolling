@@ -20,14 +20,19 @@ medicos=doctors.map(medico=>{
     })
 
 searchinput.addEventListener('input', e=>{
-    const value=e.target.value.toLowerCase()
-    console.log(value);
-    console.log(value.length);
+    const value=e.target.value.trim().toLowerCase()
+   if(value===""){
+    medicos.forEach(medico=>{
+            medico.element.classList.toggle("hide-buscador",true)
+        
+    })
+
+   }
     medicos.forEach(medico=>{
         const visible=medico.name.toLowerCase().includes(value)
         if(visible&&value.length>0){
             console.log("se muestra");
-            medico.element.classList.toggle("hide-buscador",!visible)
+            medico.element.classList.toggle("hide-buscador",false)
         }
     })
 
