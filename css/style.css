@@ -170,3 +170,33 @@ main a:hover{
   border-radius: var(--bs-modal-border-radius);
   outline: 0;
 }*/
+
+.modal-header-turno{
+  background-color: #8DE5D8;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--bs-modal-header-padding);
+  border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
+  border-top-left-radius: var(--bs-modal-inner-border-radius);
+  border-top-right-radius: var(--bs-modal-inner-border-radius);
+}
+
+.btn-detail-get-turn{
+  font-size: x-large;
+  border-radius: 5px;
+  background-color: #8DE5D8;
+  padding: 10px;
+  margin-top: 10px;
+  
+}
+  
+   
+.btn-modal-pedir-turno{
+  font-size: large;
+  border-radius: 5px;
+  background-color: #8DE5D8;
+  padding: 5px;
+  
+}
