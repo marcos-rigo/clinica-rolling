@@ -41,14 +41,14 @@
     <div class="container d-flex justify-content-between">
         <div class="row">
             <div class="col-6" id="display-image-block">
-                <image src = assets/contacto.jpg></image>
+                <img class="img-fluid"src = assets/contacto.jpg></img>
              </div>
             
-            <div class="col-lg-6 bg-light border-white rounded">
+            <div class="col-6 bg-light border-white rounded">
                 <h3>Dejanos tu consulta, la respuesta sera inmediata
                     <br><br>                 
                 </h3>
-                <form class="row g-3 needs-validation ">
+                <form id="form" action=""form class="row g-3 needs-validation ">
                     <div class="col-md-4">
                       <label for="contact-name-comment" class="form-label">Nombre</label>
                       <input type="text" class="form-control " id="contact-name-comment" pattern="[a-zA-Z]+" required minlength="3" maxlength="20">
@@ -64,11 +64,11 @@
                       </div>
                     </div>
                     <div class="mb-3">
-                        <label for="contact-comment" class="form-label">Comentario</label>
+                        <label for="contact-comment" class="form-label">Consulta</label>
                         <textarea class="form-control" id="contact-comment" placeholder="Por favor, dejanos tu consulta aqui!" required></textarea>                           
                       </div>
                     <div class="col-md-4">
-                      <button class="btn btn-dark text-light" type="submit">Enviar comentario</button>
+                      <button class="btn btn-dark text-light" type="submit">Enviar consulta</button>
                     </div>
                   </form>
             </div>
