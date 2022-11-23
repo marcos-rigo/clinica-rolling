@@ -3,14 +3,14 @@ body{
 }
 h1{
     text-align: center;
-    color: blueviolet;
+    color: #117C6F;
     font-style: oblique;
 }
 h3{
-    color: blueviolet;
+    color: #117C6F;
     font-style: oblique;
 }
 form{
-    color: blueviolet;
+    color: #117C6F;
     font-family:'Source Sans Pro', Arial, Helvetica, sans-serif;
 }
