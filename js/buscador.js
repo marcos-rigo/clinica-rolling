@@ -10,7 +10,7 @@ medicos=doctors.map(medico=>{
   const cardBuscador=document.createElement("div")
     cardBuscador.classList.add("card-buscador","text-center","hide-buscador")
         cardBuscador.innerHTML=`
-        <a class="body-busqueda"href="test.html#${medico.id}">${medico.name}</a>
+        <a class="body-busqueda"href="detail-doctor.html#${medico.id}">${medico.name}</a>
         `
         buscadorContainer.appendChild(cardBuscador)
         return{name:medico.name,
@@ -20,14 +20,19 @@ medicos=doctors.map(medico=>{
     })
 
 searchinput.addEventListener('input', e=>{
-    const value=e.target.value.toLowerCase()
-    console.log(value);
-    console.log(value.length);
+    const value=e.target.value.trim().toLowerCase()
+   if(value===""){
+    medicos.forEach(medico=>{
+            medico.element.classList.toggle("hide-buscador",true)
+        
+    })
+
+   }
     medicos.forEach(medico=>{
         const visible=medico.name.toLowerCase().includes(value)
         if(visible&&value.length>0){
             console.log("se muestra");
-            medico.element.classList.toggle("hide-buscador",!visible)
+            medico.element.classList.toggle("hide-buscador",false)
         }
     })
 

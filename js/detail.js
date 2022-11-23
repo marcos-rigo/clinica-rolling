@@ -99,3 +99,4 @@ let doctorContainer = document.querySelector('#doctor-container');
 
 doctorContainer.appendChild(doctorDetail);
 
+// A la tabla se le podria poner colores dependiendo si el turno esta libre y en el modal de solicita tu turno rellenar los campos teniendo en cuenta los datos del usuario loggeado

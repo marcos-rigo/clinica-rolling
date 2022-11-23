@@ -139,11 +139,16 @@ background-size: cover;
   display: none;
 }
 
+main a:hover{
+  cursor: pointer;
+
+}
 /*CSS del modal para solicitar turno*/
 
 .modal-turno{
   background-image: url(../assets/background-detail-page.jpg) !important;
   background-size: cover;
+
 
 }
 /*.modal-turno{

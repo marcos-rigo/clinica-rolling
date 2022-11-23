@@ -65,7 +65,7 @@ export const createUserNavbar= ()=>{
                 </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link " href="">CERRAR SESION</a>
+                  <a class="nav-link " href="" onclick()>CERRAR SESION</a>
                 </li>
             </div>
           </div> 
