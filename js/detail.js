@@ -88,7 +88,7 @@ doctorDetail.innerHTML=`
                             </tbody>  
                           </table>  
                         </div>  
-                        <button type="button" class="btn btn-info btn-lg">Solicitá tu turno online</button>
+                        <button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal" data-bs-target="#turn-modal">Solicitá tu turno online</button>
                         
                 
             </div>            

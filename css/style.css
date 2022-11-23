@@ -139,3 +139,24 @@ background-size: cover;
   display: none;
 }
 
+/*CSS del modal para solicitar turno*/
+
+.modal-turno{
+  background-image: url(../assets/background-detail-page.jpg) !important;
+  background-size: cover;
+
+}
+/*.modal-turno{
+  background-image: url(../assets/background-detail-page.jpg) !important;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: var(--bs-modal-color);
+  pointer-events: auto;
+  background-clip: padding-box;
+  border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+  border-radius: var(--bs-modal-border-radius);
+  outline: 0;
+}*/
