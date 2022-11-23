@@ -1,7 +1,10 @@
-import {createFooter, createUserNavbar} from "./helper-functions.js";
+import {createFooter, createUserNavbar,createAdminNavbar} from "./helper-functions.js";
+if(userLogged.admin){
+  createAdminNavbar()
+}else{
+  createUserNavbar()
+}
 createFooter()
-createUserNavbar()
-
 const id = window.location.hash.slice(1);
 console.log(id);
 const doctors2 = JSON.parse(localStorage.getItem('doctors'));
