@@ -12,12 +12,56 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="js/proteccionDeRutas-comun.js"></script>
 </head>
 <body>
   <header></header>
   <main id="background-detail">
       <div class="container my-5 " id="doctor-container">
       </div>
+
+   <!-- Botón solicitar turno -->
+<!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="turn-modal">
+  
+</button> -->
+
+   <!-- Modal -->
+  <div class="modal fade" id="turn-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content modal-turno">
+        <div class="modal-header">
+          <h5 class="modal-title" >Solicitá tu turno</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="turn-body">
+          <form onsubmit="(pedirturno)">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="values-name-turn" placeholder="pepito" maxlength="50" required>
+              <label for="floatingInput">Nombre</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control" id="values-dni-turn" placeholder="Ingresá tu DNI" max="9" min="8" required>
+              <label for="floatingInput">DNI</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="values-email-turn" placeholder="name@example.com" maxlength="40" required>
+              <label for="floatingInput">EMAIL</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="values-date-turn" placeholder="XX" max="120" min="16" required>
+              <label for="floatingInput">Fecha y Hora del Turno</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="values-obra-turn" placeholder="XX" max="120" min="16">
+              <label for="floatingInput">OBRA SOCIAL</label>
+            </div>
+            
+            <button type="submit" class="btn btn-secondary mt-4">Pedir Turno</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>   
   </main>
   <footer></footer>
   <script src="js//detail.js" type="module"></script>
