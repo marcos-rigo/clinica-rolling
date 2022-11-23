@@ -18,7 +18,7 @@ export const createAdminNavbar= ()=>{
                   <a class="nav-link" href="home.html">INICIO</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="">ADMINISTRACION</a>
+                  <a class="nav-link" href="admin-doctor.html" id="admin-active">ADMINISTRACION</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="">SOPORTE</a>
