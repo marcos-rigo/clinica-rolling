@@ -27,7 +27,7 @@ class Doctor{
     <th scope="row">${doctor.id}</th>
     <td>${doctor.name}</td>
     <td>${doctor.especialidad}</td>
-    <td><a href="" data-bs-toggle="modal" data-bs-target="#modal-descripcion-medico">VER DESCRIPCION</a></td>
+    <td><a href="" data-bs-toggle="modal" data-bs-target="#modal-descripcion-medico${doctor.id}">VER DESCRIPCION</a></td>
     <td>${doctor.direccion}</td>
     <td><img src="${doctor.imagen}" class="img-admin"></img></td>
     <td>${doctor.telefono}</td>
@@ -52,12 +52,15 @@ class Doctor{
     const especialidad = document.getElementById("especialidad-medico").value;
     const descripcion = document.getElementById("descripcion-medico").value;
     const direccion = document.getElementById("direccion-medico").value;
+    const imagen = document.getElementById("imagen-doctor").value;
     const telefono = document.getElementById("telefono-medico").value;
-
     const matricula = document.getElementById("matricula-medico").value;
     const turDisponible = document.getElementById("turnosDispo-medico").value;
 
-    const newDoctor = new Doctor(new Date().getTime(), name,  especialidad, descripcion, direccion, "", telefono,  matricula,  turDisponible, "", "");
+    const pubSi = document.getElementById("radio-si").value; 
+    const pubNo = document.getElementById("radio-no").value;
+
+    const newDoctor = new Doctor(new Date().getTime(), name,  especialidad, descripcion, direccion, imagen, telefono,  matricula,  turDisponible, "", "");
   
   doctors.push(newDoctor);
 
@@ -111,6 +114,36 @@ const editDoctor = (idToEdit) => {
 }
 
 
-  
+
+doctors.forEach(doctor => {
+const divModal = document.createElement('div')
+divModal.classList.add("modal", "fade")
+divModal.id = (`modal-descripcion-medico${doctor.id}`)
+divModal.setAttribute("tabindex","-1")
+divModal.setAttribute("aria-labelledby", "exampleModalLabel")
+divModal.setAttribute("aria-hidden", "true")
+divModal.innerHTML=`
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Descripción de ${doctor.name}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="descripcion-medico">
+        <p id="descripcion">
+          ${doctor.descripcion}
+        </p>
+      </div>
+      
+    </div>
+  </div>
+`
+document.getElementById("modal-prueba").appendChild(divModal)
+})
+
+
+
+
+
 
 

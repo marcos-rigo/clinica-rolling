@@ -14,3 +14,13 @@ form{
     color: #117C6F;
     font-family:'Source Sans Pro', Arial, Helvetica, sans-serif;
 }
+img{
+    
+    border-radius: 10px;
+}
+form{
+    /* width:600x; */
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+}

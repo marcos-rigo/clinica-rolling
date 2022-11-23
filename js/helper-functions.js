@@ -18,7 +18,7 @@ export const createAdminNavbar= ()=>{
                   <a class="nav-link" href="home.html">INICIO</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="">ADMINISTRACION</a>
+                  <a class="nav-link" href="admin-doctor.html" id="admin-active">ADMINISTRACION</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="">SOPORTE</a>
@@ -93,33 +93,33 @@ export const createFooter= () => {
             <div class="col-md-2">
                 <ul class="list-unstyled">
                     <li class="fw-bold my-2">Empresa</li>
-                    <li> <a href="#" class="text-decoration-none text-dark">Inicio</a> </li>
-                    <li> <a href="#" class="text-decoration-none text-dark"> Redes sociales</a></li>
-                    <li> <a href="#" class="text-decoration-none text-dark"> Marcas</a> </li>
+                    <li> <a href="home.html" class="text-decoration-none text-dark">Inicio</a> </li>
+                    <li> <a href="404.html" class="text-decoration-none text-dark"> Redes sociales</a></li>
+                    <li> <a href="404.html" class="text-decoration-none text-dark"> Marcas</a> </li>
                 </ul>
             </div>
             <div class="col-md-2">
                 <ul class="list-unstyled">
                     <li class="fw-bold my-2">Sobre nosotros</li>
-                    <li> <a href="#" class="text-decoration-none text-dark">Nuestros doctores</a> </li>
-                    <li> <a href="#" class="text-decoration-none text-dark">Creadores de la página</a> </li>
+                    <li> <a href="home.html" class="text-decoration-none text-dark">Nuestros doctores</a> </li>
+                    <li> <a href="about-us.html" class="text-decoration-none text-dark">Creadores de la página</a> </li>
 
                 </ul>
             </div>
             <div class="col-md-2">
                 <ul class="list-unstyled">
                     <li class="fw-bold my-2">Soporte</li>
-                    <li> <a href="#" class="text-decoration-none text-dark">Contactos</a> </li>
-                    <li> <a href="#" class="text-decoration-none text-dark">Solicitud de soporte</a> </li>
+                    <li> <a href="contact.html" class="text-decoration-none text-dark">Contacto</a> </li>
+                    <li> <a href="404.html" class="text-decoration-none text-dark">Solicitud de soporte</a> </li>
                 </ul>
             </div>
             <div class="col-md-2">
                 <li class="fw-bold my-2 list-unstyled">Síguenos en nuestras redes</li>
                 <ul class="list-unstyled d-flex justify-content-center justify-content-md-start">
-                    <li><a href="#" class="text-dark"><i class="fa-brands fa-facebook me-2 fa-1x"></i></a></li>
-                    <li><a href="#" class="text-dark"><i class="fa-brands fa-whatsapp mx-2 fa-1x"></i></a></li>
-                    <li><a href="#" class="text-dark"><i class="fa-brands fa-youtube mx-2 fa-1x"></i></a></li>
-                    <li><a href="#" class="text-dark"><i class="fa-brands fa-instagram mx-2 fa-1x"></i></a></li>
+                    <li><a href="https://www.facebook.com/RollingCodeSchool" target="_blank" class="text-dark"><i class="fa-brands fa-facebook me-2 fa-1x"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/rollingcode/" target="_blank"class="text-dark"><i class="fa-brands fa-linkedin-in mx-2 fa-1x"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCqqU2Ztlv_QKGPXRW9LrR9w/featured" target="_blank" class="text-dark"><i class="fa-brands fa-youtube mx-2 fa-1x"></i></a></li>
+                    <li><a href="https://www.instagram.com/rollingcodeschool/" target="_blank" class="text-dark"><i class="fa-brands fa-instagram mx-2 fa-1x"></i></a></li>
                     
                 </ul>
             </div>
@@ -127,7 +127,7 @@ export const createFooter= () => {
         <hr>
         <div class="row">
             <div class="col-md-12 text-center pt-2">
-                <p>&copy; 2022 Copyright <a href="#" class="text-dark">Clínica Rolling</a></p>
+                <p>&copy; 2022 Copyright <a href="#" class="text-dark">Clínica Rolling</a> | 9 de Julio 279 CP:4000 - San Miguel de Tucumán, Tucumán, Argentina | Call Center: +54 (0381) 4502600	</p>
             </div>
         </div>
   `
