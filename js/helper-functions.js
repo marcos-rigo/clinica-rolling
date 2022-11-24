@@ -21,7 +21,7 @@ export const createAdminNavbar= ()=>{
                   <a class="nav-link" href="admin-doctor.html" id="admin-active">ADMINISTRACION</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="">SOPORTE</a>
+                  <a class="nav-link" href="404.html">SOPORTE</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link btn btn-sm btn-outline-danger" id="logout" href="">CERRAR SESION</a>
@@ -49,13 +49,13 @@ export const createUserNavbar= ()=>{
                   <a class="nav-link" href="home.html">INICIO</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link " href="home.html">ESPECIALIDADES</a>
+                  <a class="nav-link " href="404.html">SERVICIOS</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link " href="">VER ESTUDIOS</a>
+                  <a class="nav-link " href="404.html">VER ESTUDIOS</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link " href="">NOVEDADES</a>
+                  <a class="nav-link " href="404.html">NOVEDADES</a>
                 </li>
                 <li class="nav-item">
                 <div class="d-flex flex-column buscador" >
