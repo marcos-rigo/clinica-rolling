@@ -37,8 +37,8 @@ doctorDetail.innerHTML=`
                     <div class="bg-body ">                
                     <p class=" lh-base">${doctor.descripcion}</p>
                     </div>
-                    <div class="table-responsive-xl "> 
-                        <table class="table table-bordered border-primary table-info table-responsive">
+                    <div class="table-responsive-xl"> 
+                        <table class="table table-bordered border-primary table-success table-responsive">
                             <thead>
                               <tr>
                                
@@ -51,45 +51,50 @@ doctorDetail.innerHTML=`
                               <tr>
                                 
                                <td class="text-center">Lunes</td>
-                               <td>9:00</td>
-                               <td>9:20</td>
-                               <td>9:40</td>
-                               <td>10:00</td>
-                               <td>10:20</td>
-                               <td>10:40</td>
-                               <td>11:00</td>
-                               <td>11:20</td>
-                               <td>11:40</td>
-                               <td>12:00</td>
-                            
+                                ${doctor.turnos.lunes.map(turno=>{
+                                  return(
+
+                                    
+                                    `
+                                    <td class=${turno.disponible?"bg-success":"bg-danger"}>${turno.hora}</td>
+                                    
+                                    `
+                                    )
+                                  
+                                }
+                                  )}
                               </tr> 
                               <tr>
                                 
                                <td class="text-center">Miércoles</td>
-                               <td>9:00</td>
-                               <td>9:20</td>
-                               <td>9:40</td>
-                               <td>10:00</td>
-                               <td>10:20</td>
-                               <td>10:40</td>
-                               <td>11:00</td>
-                               <td>11:20</td>
-                               <td>11:40</td>
-                               <td>12:00</td>
+                               ${doctor.turnos.miercoles.map(turno=>{
+                                return(
+
+                                  
+                                  `
+                                  <td class=${turno.disponible?"bg-success":"bg-danger"}>${turno.hora}</td>
+                                  
+                                  `
+                                  )
+                                
+                              }
+                                )}
                               </tr> 
                               <tr>
                                
                                <td class="text-center">Viernes</td>
-                               <td>9:00</td>
-                               <td>9:20</td>
-                               <td>9:40</td>
-                               <td>10:00</td>
-                               <td>10:20</td>
-                               <td>10:40</td>
-                               <td>11:00</td>
-                               <td>11:20</td>
-                               <td>11:40</td>
-                               <td>12:00</td>
+                               ${doctor.turnos.viernes.map(turno=>{
+                                return(
+
+                                  
+                                  `
+                                  <td class=${turno.disponible?"bg-success":"bg-danger"}>${turno.hora}</td>
+                                  
+                                  `
+                                  )
+                                
+                              }
+                                )}
                               </tr> 
                             </tbody>  
                           </table>  
@@ -170,12 +175,13 @@ modalTurno.innerHTML=`
             </select>
           </p>
         </div>
-      <button type="submit" id="boton-modal" class="btn-modal-pedir-turno mt-4"data-bs-dismiss="modal" aria-label="Close">Pedir Turno</button>
+      <button type="submit" id="boton-modal" class="btn-modal-pedir-turno mt-4" data-bs-dismiss="modal" aria-label="Close">Pedir Turno</button>
     </form>
   </div>
 </div>
 </div>
 `
+//data-bs-dismiss="modal" aria-label="Close"
 const modalContainer = document.getElementById("open-modal-container")
 modalContainer.appendChild(modalTurno)
 const consultasLunes = []
@@ -220,9 +226,8 @@ document.querySelector('#form-modal').reset();
 alert("Su consulta ha sido guardada con exito")
 }
 
-const botonModal= document.getElementById("form-modal")
-botonModal.onsubmit= pedirturno
-console.log(consultas);
+const formModal= document.getElementById("form-modal")
+formModal.onsubmit= pedirturno
 const fillmodal = () => {
   
   const userToFill = userLogged
