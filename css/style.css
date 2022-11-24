@@ -200,3 +200,8 @@ main a:hover{
   padding: 5px;
   
 }
+
+.iframe{
+  border: 1px solid black;
+    width: 100%;
+}
