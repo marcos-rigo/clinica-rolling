@@ -40,7 +40,7 @@ const login = (e)=>{
     window.location.assign(window.location.origin + '/home.html');
  
   }else{
-    alertMessage('credenciales invalidas','form')
+    alertMessage('credenciales invalidas','#login-body')
   }
 }
 

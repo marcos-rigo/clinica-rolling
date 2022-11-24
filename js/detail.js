@@ -1,4 +1,4 @@
-import {createFooter, createUserNavbar,createAdminNavbar} from "./helper-functions.js";
+import {createFooter, createUserNavbar,createAdminNavbar,logout} from "./helper-functions.js";
 const userLogged = JSON.parse(localStorage.getItem('userInfo'));
 if(userLogged.admin){
   createAdminNavbar()
@@ -6,6 +6,8 @@ if(userLogged.admin){
   createUserNavbar()
 }
 createFooter()
+const logoutbtn = document.getElementById("logout")
+logoutbtn.onclick=logout
 const id = window.location.hash.slice(1);
 console.log(id);
 const doctors2 = JSON.parse(localStorage.getItem('doctors'));
