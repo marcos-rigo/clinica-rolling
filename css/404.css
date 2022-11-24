@@ -1,0 +1,40 @@
+#img-text{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+#parrafo{
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    font-size: 2.2rem;
+}
+
+#sub{  
+    text-decoration: none;
+    font-size: 2.5rem
+}
+
+button {
+	background: none;
+	color: #000;
+}
+
+
+@media all and (min-with: 1260px){
+    #parrafo{
+        color: white;
+        position: absolute;
+        top: 40%;
+        left: 5%;
+        font-size: 1.2rem;
+    }
+    
+    
+}
+
+.bg-clinica{
+    background-color: #8DE5D8;
+}
