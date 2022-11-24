@@ -1,35 +1,88 @@
-main{
-    /* width: 100vw;
-    height: 100vh; */
-    background-image: url("./../assets/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg");
+
+
+
+#portada-nosotros{
+    background-image: url(/assets/devs/portada-acercadenosotros.jpg);
+    height: 90vh;
     background-size: cover;
+    background-position: center;
+    
 }
-.img-equals{
-    width: 400px;
-    height: 400px;
+
+#titulo-nosotros{
+    color: white;
+    text-align: left;
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
-.card{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(109, 50, 205);
+
+#titulo-secundario{
+        color: white;
+        text-align: left;
+        font-size: 1.5rem;
+        font-style: italic;
+        line-height: 1.5rem;
+        margin-bottom: 25px;
 }
-h1{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(68, 0, 255);
+
+
+#caja-subtitulo{
+    width: 40vw;
 }
-h5{
-    color:rgb(162, 0, 255);
-    font-size:23px;
+
+#boton-team{
+    background-color: #8de5d8;
+    color: black;
 }
-.caja{
-    background-color: tan;
+
+
+
+/*** About ***/
+
+#titulo-cuadro-nosotros{
+    font-size: 2rem;
 }
-.img-fluid{
-    height: auto;
-    width: auto;
-    max-width: 200px;
-    max-height: 200px;
+
+@media (min-width: 992px) {
+    .container.about {
+        max-width: 100% !important;
+    }
+
+    .about-text  {
+        padding-right: calc(((100% - 960px) / 2) + .75rem);
+    }
 }
-.container-fluid{
-background-image:url(./../assets/fondomatrix.jpg);
-background-size:cover;
+
+@media (min-width: 1200px) {
+    .about-text  {
+        padding-right: calc(((100% - 1140px) / 2) + .75rem);
+    }
+}
+
+@media (min-width: 1400px) {
+    .about-text  {
+        padding-right: calc(((100% - 1320px) / 2) + .75rem);
+    }
+}
+
+
+/*** Team ***/
+.team-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
+.team-item img {
+    border-radius: 8px 60px 0 0;
+}
+
+.team-item .team-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: #FFFFFF;
+    transition: .5s;
 }
