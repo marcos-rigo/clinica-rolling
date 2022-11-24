@@ -117,11 +117,11 @@
                 placeholder="Matrícula sin puntos ni comas" required minlength="4" maxlength="5" />
             </div>
 
-            <div class="mb-3">
+            <!-- <div class="mb-3">
               <label for="turnosDispo-medico" class="form-label">Turnos disponibles</label>
               <input type="number" class="form-control" id="turnosDispo-medico"
                 placeholder="Cantidad de turnos disponibles" required maxlength="2" />
-            </div>
+            </div> -->
 
             <div class="mb-3">
               <label for="publicar" class="form-label">¿Publicar ahora?</label>
@@ -192,12 +192,27 @@
               <input type="number" class="form-control" id="telefono-medico-edit"
                 placeholder="Incluir código de área sin 0 ni 15" required maxlength="10" />
             </div>
-
             <div class="mb-3">
+              <label for="publicar" class="form-label">¿Publicar ahora?</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio-si-edit" checked>
+                <label class="form-check-label" for="radio-si">
+                  Si
+                </label>
+              </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio-no-edit">
+              <label class="form-check-label" for="radio-no">
+                No
+              </label>
+            </div>
+          </div>
+
+            <!-- <div class="mb-3">
               <label for="turnosDispo-medico" class="form-label">Turnos disponibles</label>
               <input type="number" class="form-control" id="turnosDispo-medico-edit"
                 placeholder="Cantidad de turnos disponibles" required maxlength="2" />
-            </div>
+            </div> -->
 
             <button type="submit" data-bs-dismiss="modal" class="btn btn-primary">
               Editar

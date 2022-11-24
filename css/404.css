@@ -1,4 +1,4 @@
-#img-text{
+.img-text{
     position: relative;
     display: inline-block;
     text-align: center;
@@ -7,6 +7,7 @@
 #parrafo{
     color: white;
     position: absolute;
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.6);
     top: 40%;
     left: 5%;
     font-size: 2.2rem;
@@ -14,25 +15,65 @@
 
 #sub{  
     text-decoration: none;
-    font-size: 2.5rem
+    /* font-size: 2.5rem */
 }
 
 button {
-	background: none;
+	background-color: white;
 	color: #000;
 }
 
 
-@media all and (min-with: 1260px){
+@media all and (max-width: 1260px){
     #parrafo{
         color: white;
-        position: absolute;
-        top: 40%;
+        position:absolute;
+        text-shadow: 2px 2px 1px rgba(0,0,0,0.6);
+        top: 35%;
         left: 5%;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
     
     
+}
+@media all and (max-width: 840px){
+    #parrafo{
+        color: white;
+        position:absolute;
+        text-shadow: 2px 2px 1px rgba(0,0,0,0.6);
+        top: 25%;
+        left: 5%;
+        /* font-size: 1rem; */
+    }
+    
+    
+}
+@media all and (max-width: 600px){
+    #parrafo{
+        color: white;
+        position:absolute;
+        text-shadow: 2px 2px 1px rgba(0,0,0,0.6);
+        top: 20%;
+        left: 5%;
+        font-size: 0.8rem;
+    }
+    
+    
+}
+@media all and (max-width: 380px){
+    #parrafo{
+        color: white;
+        position:absolute;
+        text-shadow: 2px 2px 1px rgba(0,0,0,0.6);
+        top: 18%;
+        left: 5%;
+        font-size: 0.7rem;
+    }
+    
+    
+}
+main{
+    background-color: #81D2DD;
 }
 
 .bg-clinica{
