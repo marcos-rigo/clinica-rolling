@@ -1,4 +1,5 @@
 import {createFooter, createUserNavbar,createAdminNavbar} from "./helper-functions.js";
+const userLogged = JSON.parse(localStorage.getItem('userInfo'));
 if(userLogged.admin){
   createAdminNavbar()
 }else{
@@ -103,3 +104,111 @@ let doctorContainer = document.querySelector('#doctor-container');
 doctorContainer.appendChild(doctorDetail);
 
 // A la tabla se le podria poner colores dependiendo si el turno esta libre y en el modal de solicita tu turno rellenar los campos teniendo en cuenta los datos del usuario loggeado
+// const userToFill = userLogged
+// console.log(userToFill);
+
+const modalTurno = document.createElement("div")
+modalTurno.classList.add("modal","fade")
+modalTurno.setAttribute("tabindex","-1")
+modalTurno.setAttribute("aria-hidden","true")
+modalTurno.id = ("turn-modal")
+modalTurno.innerHTML=`
+<div class="modal-dialog">
+<div class="modal-content modal-turno">
+  <div class="modal-header-turno">
+    <h5 class="modal-title" >Solicitá tu turno</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body" id="turn-body">
+    <form onclick="pedirturno()">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="values-name-turn" placeholder="pepito" maxlength="50" required>
+        <label for="floatingInput">Nombre</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="values-dni-turn" placeholder="Ingresá tu DNI" maxlenght="9" minlenght="8" required>
+        <label for="floatingInput">DNI</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="values-email-turn" placeholder="name@example.com" maxlength="40" required>
+        <label for="floatingInput">EMAIL</label>
+      </div>
+       
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="values-obra-turn" placeholder="XX" max="120" min="16">
+        <label for="floatingInput">OBRA SOCIAL</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="values-motivo-turn" placeholder="XX" max="300" min="2" required>
+        <label for="floatingInput">MOTIVO DE LA CONSULTA</label>
+        <br>
+
+        <div form method="get" action="#">
+          <p>
+            <label for="dwarfs">Elige un día</label>
+            <select name="drawfs" id="values-dia-turn">
+              <option>Lunes</option>
+              <option>Miercoles</option>
+              <option>Viernes</option>
+            </select>
+          </p>
+          <p>
+            <label for="favoriteOnly">Elige un horario</label>
+            <select name="favoriteOnly" id="values-hora-turn">
+              <option>9:00</option>
+              <option>9:20</option>
+              <option>9:40</option>
+              <option>10:00</option>
+              <option>10:20</option>
+              <option>10:40</option>
+              <option>11:00</option>
+              <option>11:20</option>
+              <option>11:40</option>
+              <option>12:00</option>
+            </select>
+          </p>
+        </div>
+      <button type="submit" class="btn-modal-pedir-turno mt-4">Pedir Turno</button>
+    </form>
+  </div>
+</div>
+</div>
+`
+const modalContainer = document.getElementById("open-modal-container")
+modalContainer.appendChild(modalTurno)
+const consultas = []
+class Consulta{
+  constructor(name,email,dni,motivo,dia,hora,obra){
+  
+  this.name = name
+  this.email = email
+  this.dni=dni
+  this.motivo=motivo
+  this.dia=dia
+  this.hora=hora
+  this.obra=obra
+  }
+}
+const pedirturno = ()=>{
+const name = document.getElementById("values-name-turn").value 
+const dni = document.getElementById("values-dni-turn").value 
+const email = document.getElementById("values-email-turn").value 
+const motivo = document.getElementById("values-motivo-turn").value 
+const dia = document.getElementById("values-dia-turn").value 
+const hora = document.getElementById("values-hora-turn").value 
+const obra = document.getElementById("values-obra-turn").value 
+const newConsulta = new Consulta(name,dni,email,motivo,dia,hora,obra)
+consultas.push(newConsulta)
+localStorage.setItem("consultas",JSON.stringify(consultas))
+
+}
+pedirturno()
+console.log(consultas);
+const fillmodal = () => {
+  
+  const userToFill = userLogged
+  document.getElementById("values-name-turn").value = userToFill.name
+  document.getElementById("values-dni-turn").value = userToFill.dni
+  document.getElementById("values-email-turn").value = userToFill.email
+}
+fillmodal()
