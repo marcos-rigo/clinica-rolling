@@ -122,7 +122,7 @@ modalTurno.innerHTML=`
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
   </div>
   <div class="modal-body" id="turn-body">
-    <form >
+    <form id="form-modal">
       <div class="form-floating mb-3">
         <input type="text" class="form-control" id="values-name-turn" placeholder="pepito" maxlength="50" required>
         <label for="floatingInput">Nombre</label>
@@ -170,7 +170,7 @@ modalTurno.innerHTML=`
             </select>
           </p>
         </div>
-      <button type="submit" id="form-modal" class="btn-modal-pedir-turno mt-4">Pedir Turno</button>
+      <button type="submit" id="boton-modal" class="btn-modal-pedir-turno mt-4"data-bs-dismiss="modal" aria-label="Close">Pedir Turno</button>
     </form>
   </div>
 </div>
@@ -178,7 +178,9 @@ modalTurno.innerHTML=`
 `
 const modalContainer = document.getElementById("open-modal-container")
 modalContainer.appendChild(modalTurno)
-const consultas = []
+const consultasLunes = []
+const consultasMiercoles = []
+const consultasViernes = [] 
 class Consulta{
   constructor(id,name,email,dni,motivo,dia,hora,obra){
   this.id=id
@@ -199,14 +201,27 @@ const motivo = document.getElementById("values-motivo-turn").value
 const dia = document.getElementById("values-dia-turn").value 
 const hora = document.getElementById("values-hora-turn").value 
 const obra = document.getElementById("values-obra-turn").value 
-const newConsulta = new Consulta(new Date().getTime(),name,dni,email,motivo,dia,hora,obra)
-consultas.push(newConsulta)
-localStorage.setItem("consultas",JSON.stringify(consultas))
+const newConsulta = new Consulta(new Date().getTime(),name,email,dni,motivo,dia,hora,obra)
+
+if (dia=="Lunes") {
+  consultasLunes.push(newConsulta)
+  localStorage.setItem("consultasLunes",JSON.stringify(consultasLunes))
+  
+} else if(dia=="Miercoles"){
+  consultasMiercoles.push(newConsulta)
+  localStorage.setItem("consultasMiercoles",JSON.stringify(consultasMiercoles))
+}else{
+  consultasViernes.push(newConsulta)
+  localStorage.setItem("consultasViernes",JSON.stringify(consultasViernes))
 
 }
 
-const formModal= document.getElementById("form-modal")
-formModal.onclick= pedirturno
+document.querySelector('#form-modal').reset();
+alert("Su consulta ha sido guardada con exito")
+}
+
+const botonModal= document.getElementById("form-modal")
+botonModal.onsubmit= pedirturno
 console.log(consultas);
 const fillmodal = () => {
   
