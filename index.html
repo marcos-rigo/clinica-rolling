@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinica Rolling</title>
     <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 </head>
-<body id="landing-page">
+<body >
     <header>
         <nav class="navbar navbar-expand-lg sticky-top bg-clinica">
             <div class="container-fluid">
@@ -27,31 +26,107 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link btn btn-sm m-1 btn-outline-primary" aria-current="page" data-bs-toggle="modal" data-bs-target="#exampleModal">Ingresar</a>
+                        <a class="nav-link btn btn-sm m-1 btn-outline-primary" aria-current="page" data-bs-toggle="modal" data-bs-target="#login-modal">Ingresar</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link btn btn-sm m-1 btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Crear cuenta</a>
+                        <a class="nav-link btn btn-sm m-1 btn-outline-success" data-bs-toggle="modal" data-bs-target="#register-modal">Crear cuenta</a>
                       </li>
                   </div>
                 </div>
         </nav>
       </header>
-      <main>
+      <main id="landing-page">
 
         <!-- Portada principal - MARCOS -->
-        <div class="container-fluid portada">
+        <div class="container-fluid portada" >
           <div class="texto-principal">Clinica Rolling</div>
-          <div class="texto-secundario">Te ayudamos a conseguir tu
-            máximo rendimiento</div>
+          <div class="texto-secundario" >Te ayudamos a conseguir tu
+            máximo rendimiento en el deporte. <br> <a class="text-capitalize text-primary" data-bs-toggle="modal" data-bs-target="#login-modal">Ingresa</a> para saber un poco más. O <a class="text-primary text-capitalize"  data-bs-toggle="modal" data-bs-target="#register-modal">registrate</a> si aun no tienes cuenta</div>
             
-            <a class="btn btn-primary btn-lg text-uppercase" href="#" id="boton-portada">Registrarme</a>
+            <!-- <a class="btn btn-primary btn-lg text-uppercase" href="#" id="boton-portada" data-bs-toggle="modal" data-bs-target="#register-modal">Registrarme</a>
             
-            <a class="btn btn-secondary btn-lg text-uppercase m-1" href="#" id="boton-ingreso">Ingresar</a>
-            
+            <a class="btn btn-secondary btn-lg text-uppercase m-1" href="#" id="boton-ingreso" data-bs-toggle="modal" data-bs-target="#login-modal">Ingresar</a> -->
+            <p class="invisible d-md-block d-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi corrupti voluptate perspiciatis voluptatem autem quaerat rem corporis, quam delectus laboriosam similique deserunt praesentium doloribus optio voluptatum quisquam veniam hic impedit!
+            Eum, assumenda? Doloremque animi eaque voluptates enim! Rem ad, ipsa laborum assumenda accusantium eius doloribus distinctio illum numquam error ab in, molestiae eum dolor ducimus necessitatibus incidunt. Veritatis, nostrum eius.
+            Quos, earum blanditiis! Molestias qui perspiciatis dolore molestiae distinctio cupiditate ab consequatur doloribus odio ut veritatis minima aperiam quam ea, accusamus modi eaque. Ipsum praesentium placeat amet laborum similique nostrum?
+            Aperiam eum, autem ducimus quae eveniet quod ipsa, fugit architecto laboriosam voluptatum vel nulla quo ullam iure. Modi ducimus ab dignissimos pariatur recusandae at iusto porro reiciendis saepe? Aut, aspernatur!
+            Porro nemo nihil doloribus. Vero delectus soluta ullam illum dignissimos at atque corporis tempora, nihil possimus ex libero labore! Modi, ab quibusdam labore nobis deserunt laudantium eius repellat provident error?</p>
           </div>
+          
+
         </main>
+
+          <!--?MODALES-->
+  <!-- Modal de registro -->
+        <div class="modal fade" id="register-modal" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" >Registrate</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" id="register-body">
+                <form onsubmit="register(event)">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="values-name" placeholder="pepito" maxlength="50" required>
+                    <label for="floatingInput">Nombre</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="values-age" placeholder="XX" max="80" min="16" required>
+                    <label for="floatingInput">Edad</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="values-dni" placeholder="XX" minlength="7" maxlength="8"  required>
+                    <label for="floatingInput">DNI</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="values-email" placeholder="name@example.com" maxlength="40" required>
+                    <label for="floatingInput">Email</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="values-password" placeholder="Password" maxlength="16" minlength="6" required>
+                    <label for="floatingPassword">Contraseña</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="password" class="form-control" id="values-password-2" placeholder="Password" maxlength="16" minlength="6" required>
+                    <label for="floatingPassword">Repita contraseña</label>
+                  </div>
+                  <button type="submit" class="btn btn-secondary mt-4">Ingresar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <!--MODAL DE LOGIN-->
+          <div class="modal fade" id="login-modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" >Ingresar</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="login-body">
+                  <form onsubmit="login(event)">
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control" id="values-email-login" placeholder="name@example.com" maxlength="40" required>
+                      <label for="floatingInput">Email</label>
+                    </div>
+                    <div class="form-floating">
+                      <input type="password" class="form-control" id="values-password-login" placeholder="Password" maxlength="16" minlength="6" required>
+                      <label for="floatingPassword">Contraseña</label>
+                    </div>
+                    <button type="submit" class="btn btn-secondary mt-4" onclick="login(event)">Ingresar</button>
+                  </form>
+                  <a href="" class="text-danger fw-bold" data-bs-toggle="modal" data-bs-target="#register-modal">Si no tenes una cuenta, registrate acá</a>
+                </div>
+              </div>
+            </div>
+            </div>
+
     <footer></footer>
-    <script src="js/app.js"></script>
+    <script src="js/app.js" type="module"></script>
+    <script src="js/login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administración de Médicos</title>
+  <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/admin-doctor.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <script src="js/proteccionDeRutas-Admin.js"></script>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div class="container-fluid d-flex flex-column justify-content-center" id="portada-admin">
+      <div>
+      <h1 id="titulo-admin-doctor">Administración de Doctores</h1>
+    </div>
+    <!-- <div>
+      
+    </div> -->
+    </div>
+    <br /><br />
+    <div class="container">
+      <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modal-agregar-medico">
+        Agregar Doctor
+      </button>
+      <br /><br />
+      <div class="table-responsive">
+        <table class="table">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">Código</th>
+              <th scope="col">Nombre completo</th>
+              <th scope="col">Especialidad</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col">Dirección</th>
+              <th scope="col">Imagen</th>
+              <th scope="col">Teléfono</th>
+              <th scope="col">Matrícula</th>
+              <th scope="col">Turnos disponibles</th>
+              <th scope="col">Turnos ocupados</th>
+              <th scope="col">Publicado</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+
+  <!-- MODAL DE AGREGAR MEDICO -->
+  <div class="modal fade" id="modal-agregar-medico" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            <strong> Agregar Doctor</strong>
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form  onsubmit="addMedico(event)" >
+            <div class="mb-3">
+              <label for="nombre-medico" class="form-label">Nombre completo</label>
+              <input type="text" class="form-control" id="nombre-medico" placeholder="Nombre y Apellido" required maxlength="40" />
+            </div>
+            <!-- <div class="mb-3">
+              <label for="especialidad-medico" class="form-label">Especialidad</label>
+              <input type="text" class="form-control" id="especialidad-medico" placeholder="" required maxlength="30" />
+            </div> -->
+            <div class="mb-3">
+              <label for="especialidad-medico" class="form-label">Seleccione Especialidad</label>
+            <select class="form-select" aria-label="Default select example" id="especialidad-medico">
+              <option selected>Kinesiologia</option>
+              <option value="Traumatologia">Traumatologia</option>
+              <option value="Cardiologia">Cardiologia</option>
+              <option value="Nutricion">Nutricion</option>
+            </select>
+          </div>
+            <div class="mb-3">
+              <label for="descripcion-medico" class="form-label">Descripción</label>
+              <textarea class="form-control" placeholder="Descripción del Doctor" id="descripcion-medico"
+                style="height: 100px" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="direccion-medico" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="direccion-medico" placeholder="Dirección exacta" required
+                maxlength="40" />
+            </div>
+            <div class="mb-3">
+              <label for="imagen-doctor" class="form-label">Imágen del Doctor</label>
+              <input type="text" class="form-control" id="imagen-doctor" placeholder="Link a la imagen" required/>
+            </div>
+            <!-- <div class="mb-3">
+              <label for="imagen-doctor" class="form-label">Imagen del Doctor</label>
+              <input class="form-control" type="file" id="imagen-doctor">
+            </div> -->
+            <div class="mb-3">
+              <label for="telefono-medico" class="form-label">Teléfono</label>
+              <input type="number" class="form-control" id="telefono-medico"
+                placeholder="Incluir código de área sin 0 ni 15" required maxlength="10" />
+            </div>
+            <div class="mb-3">
+              <label for="matricula-medico" class="form-label">Matricula</label>
+              <input type="number" class="form-control" id="matricula-medico"
+                placeholder="Matrícula sin puntos ni comas" required minlength="4" maxlength="5" />
+            </div>
+
+            <div class="mb-3">
+              <label for="turnosDispo-medico" class="form-label">Turnos disponibles</label>
+              <input type="number" class="form-control" id="turnosDispo-medico"
+                placeholder="Cantidad de turnos disponibles" required maxlength="2" />
+            </div>
+
+            <div class="mb-3">
+              <label for="publicar" class="form-label">¿Publicar ahora?</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio-si" checked>
+                <label class="form-check-label" for="radio-si">
+                  Si
+                </label>
+              </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio-no">
+              <label class="form-check-label" for="radio-no">
+                No
+              </label>
+            </div>
+          </div>
+
+            <button type="submit" class="btn btn-primary">
+              Guardar
+            </button>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE EDITAR MEDICO -->
+  <div class="modal fade" id="modal-editar-medico" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            Editar Médico
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="edit-form">
+            <div class="mb-3">
+              <label for="nombre-medico" class="form-label">Nombre completo</label>
+              <input type="text" class="form-control" id="nombre-medico-edit" placeholder="Nombre y Apellido" required
+                maxlength="40" />
+            </div>
+            <div class="mb-3">
+              <label for="especialidad-medico" class="form-label">Especialidad</label>
+              <input type="text" class="form-control" id="especialidad-medico-edit" placeholder="" required
+                maxlength="30" />
+            </div>
+            <div class="mb-3">
+              <label for="descripcion-medico" class="form-label">Descripción</label>
+              <textarea class="form-control" placeholder="Descripción del Médico" id="descripcion-medico-edit"
+                style="height: 100px" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="direccion-medico" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="direccion-medico-edit" placeholder="Dirección exacta" required
+                maxlength="40" />
+            </div>
+            <div class="mb-3">
+              <label for="matricula-medico" class="form-label">Matricula</label>
+              <input type="number" class="form-control" id="matricula-medico-edit"
+                placeholder="Matrícula sin puntos ni comas" required min="0" />
+            </div>
+
+            <div class="mb-3">
+              <label for="telefono-medico" class="form-label">Teléfono</label>
+              <input type="number" class="form-control" id="telefono-medico-edit"
+                placeholder="Incluir código de área sin 0 ni 15" required maxlength="10" />
+            </div>
+
+            <div class="mb-3">
+              <label for="turnosDispo-medico" class="form-label">Turnos disponibles</label>
+              <input type="number" class="form-control" id="turnosDispo-medico-edit"
+                placeholder="Cantidad de turnos disponibles" required maxlength="2" />
+            </div>
+
+            <button type="submit" data-bs-dismiss="modal" class="btn btn-primary">
+              Editar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE DESCRIPCION -->
+  <!-- Modal -->
+  <div id="modal-prueba"></div>
+
+  <script src="js/admin-doctor.js"></script>
+  <script src="js/prueba.js" type="module"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

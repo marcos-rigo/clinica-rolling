@@ -7,7 +7,7 @@
 .bg-footer{
     background-color:  #089BD3;
 }
-body{
+#landing-page{
   background-image: url("../assets/Portada-Proy-2.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -20,7 +20,6 @@ body{
     padding-top: 12rem;
     padding-bottom: 6rem;
 
-     
   }
   
   .texto-principal {
@@ -79,3 +78,130 @@ body{
   }
   
   
+#especialidades{
+    background-image: url(/assets/informe-m-dico-electr-nico-conmovedor-del-doctor-de-la-medicina-en-tableta-dna-atención-sanitaria-digitaces-y-conexión-red-154742526.jpg);
+    background-size: cover;
+}
+.img-admin{
+  width: 75px;
+  height: 75px;}
+#background-detail{
+background-image: url(/assets/background-detail-page.jpg);
+background-size: cover;
+}
+.image-doctor {
+  background-image: url(/assets/logo-back-foto-doctor.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+}
+.card-effect:hover{
+  
+    transform: translateY(-15px);
+    transition: all 0.5s ease-in-out;
+
+
+}
+.card-imagen{
+  width: 286px;
+  height: 345px;
+}
+.search
+{
+    width: 200px;
+    background: none;
+    border: 1px solid #117C6F;
+    /* color: #117C6F; */
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.search:focus {
+    outline: none;
+    border-color: #117C6F;
+}
+
+.buscador{
+  flex-direction: column;
+}
+.user-cards{
+  width: 204px;
+ height: 36px;
+ position: absolute;
+ margin-top: 50px;
+}
+.card-buscador{
+  border: 1px solid black;
+  background-color: #117C6F;
+
+}
+.img-buscador{
+  width: 40px;
+  height: 40px;
+}
+.hide-buscador{
+  display: none;
+
+}
+
+main a:hover{
+  cursor: pointer;
+
+}
+/*CSS del modal para solicitar turno*/
+
+.modal-turno{
+  background-image: url(../assets/background-detail-page.jpg) !important;
+  background-size: cover;
+
+
+}
+/*.modal-turno{
+  background-image: url(../assets/background-detail-page.jpg) !important;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: var(--bs-modal-color);
+  pointer-events: auto;
+  background-clip: padding-box;
+  border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+  border-radius: var(--bs-modal-border-radius);
+  outline: 0;
+}*/
+
+.modal-header-turno{
+  background-color: #8DE5D8;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--bs-modal-header-padding);
+  border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
+  border-top-left-radius: var(--bs-modal-inner-border-radius);
+  border-top-right-radius: var(--bs-modal-inner-border-radius);
+}
+
+.btn-detail-get-turn{
+  font-size: x-large;
+  border-radius: 5px;
+  background-color: #8DE5D8;
+  padding: 10px;
+  margin-top: 10px;
+  
+}
+  
+   
+.btn-modal-pedir-turno{
+  font-size: large;
+  border-radius: 5px;
+  background-color: #8DE5D8;
+  padding: 5px;
+  
+}
+
+.iframe{
+  border: 1px solid black;
+    width: 100%;
+}
