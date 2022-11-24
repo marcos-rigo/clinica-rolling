@@ -171,7 +171,7 @@ main a:hover{
   outline: 0;
 }*/
 
-.modal-header-turno{
+.modal-header-turno, .modal-header-register, .modal-header-login{
   background-color: #8DE5D8;
   display: flex;
   flex-shrink: 0;
