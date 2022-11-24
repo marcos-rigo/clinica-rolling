@@ -1,16 +1,37 @@
-body{
+.bg-clinica{
     background-color: #8DE5D8;
+}
+
+main{
+    background-color: #ecfaf8;
 }
 h1{
     text-align: center;
-    color: blueviolet;
+    color: #117C6F;
     font-style: oblique;
 }
-h3{
-    color: blueviolet;
+h3, .p-contact{
+    color: #117C6F;
     font-style: oblique;
 }
 form{
-    color: blueviolet;
+    color: #117C6F;
     font-family:'Source Sans Pro', Arial, Helvetica, sans-serif;
+}
+img{
+    
+    border-radius: 10px;
+}
+form{
+    /* width:600x; */
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.p-contact{
+    font-size: 3rem;
+}
+
+.btn-clinica{
+    background-color: #117C6F;
 }
