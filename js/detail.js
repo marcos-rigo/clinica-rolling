@@ -1,4 +1,4 @@
-import {createFooter, createUserNavbar,createAdminNavbar} from "./helper-functions.js";
+import {createFooter, createUserNavbar,createAdminNavbar,logout} from "./helper-functions.js";
 const userLogged = JSON.parse(localStorage.getItem('userInfo'));
 if(userLogged.admin){
   createAdminNavbar()
@@ -6,6 +6,8 @@ if(userLogged.admin){
   createUserNavbar()
 }
 createFooter()
+const logoutbtn = document.getElementById("logout")
+logoutbtn.onclick=logout
 const id = window.location.hash.slice(1);
 console.log(id);
 const doctors2 = JSON.parse(localStorage.getItem('doctors'));
@@ -120,7 +122,7 @@ modalTurno.innerHTML=`
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
   </div>
   <div class="modal-body" id="turn-body">
-    <form onclick="pedirturno()">
+    <form >
       <div class="form-floating mb-3">
         <input type="text" class="form-control" id="values-name-turn" placeholder="pepito" maxlength="50" required>
         <label for="floatingInput">Nombre</label>
@@ -168,7 +170,7 @@ modalTurno.innerHTML=`
             </select>
           </p>
         </div>
-      <button type="submit" class="btn-modal-pedir-turno mt-4">Pedir Turno</button>
+      <button type="submit" id="form-modal" class="btn-modal-pedir-turno mt-4">Pedir Turno</button>
     </form>
   </div>
 </div>
@@ -178,8 +180,8 @@ const modalContainer = document.getElementById("open-modal-container")
 modalContainer.appendChild(modalTurno)
 const consultas = []
 class Consulta{
-  constructor(name,email,dni,motivo,dia,hora,obra){
-  
+  constructor(id,name,email,dni,motivo,dia,hora,obra){
+  this.id=id
   this.name = name
   this.email = email
   this.dni=dni
@@ -197,12 +199,14 @@ const motivo = document.getElementById("values-motivo-turn").value
 const dia = document.getElementById("values-dia-turn").value 
 const hora = document.getElementById("values-hora-turn").value 
 const obra = document.getElementById("values-obra-turn").value 
-const newConsulta = new Consulta(name,dni,email,motivo,dia,hora,obra)
+const newConsulta = new Consulta(new Date().getTime(),name,dni,email,motivo,dia,hora,obra)
 consultas.push(newConsulta)
 localStorage.setItem("consultas",JSON.stringify(consultas))
 
 }
-pedirturno()
+
+const formModal= document.getElementById("form-modal")
+formModal.onclick= pedirturno
 console.log(consultas);
 const fillmodal = () => {
   

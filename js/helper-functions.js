@@ -24,7 +24,7 @@ export const createAdminNavbar= ()=>{
                   <a class="nav-link" href="">SOPORTE</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link btn btn-sm btn-outline-danger" href="">CERRAR SESION</a>
+                  <a class="nav-link btn btn-sm btn-outline-danger" id="logout" href="">CERRAR SESION</a>
                 </li>
             </div>
           </div>  
@@ -65,7 +65,7 @@ export const createUserNavbar= ()=>{
                 </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link " href="" onclick()>CERRAR SESION</a>
+                  <a class="nav-link " id="logout" href="" onclick()>CERRAR SESION</a>
                 </li>
             </div>
           </div> 
@@ -133,4 +133,9 @@ export const createFooter= () => {
   `
   const footer = document.querySelector("footer")
   footer.appendChild(div)
+}
+
+export const logout = ()=>{
+  localStorage.removeItem('userInfo');
+  window.location.assign(window.location.origin + '/index.html')
 }

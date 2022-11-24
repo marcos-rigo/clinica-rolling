@@ -1,4 +1,4 @@
-import {createFooter, createUserNavbar, createAdminNavbar} from "./helper-functions.js";
+import {createFooter, createUserNavbar, createAdminNavbar,logout} from "./helper-functions.js";
 const doctors= JSON.parse(localStorage.getItem('doctors'))
 const userLogged = JSON.parse(localStorage.getItem('userInfo'));
 if(userLogged.admin){
@@ -7,7 +7,8 @@ if(userLogged.admin){
     createUserNavbar()
 }
 createFooter()
-
+const logoutbtn = document.getElementById("logout")
+logoutbtn.onclick=logout
 
 doctors.forEach(doctor=> {
     if(doctor.publicado){

@@ -1,3 +1,5 @@
-import { createFooter,createAdminNavbar } from "./helper-functions.js";
+import { createFooter,createAdminNavbar,logout } from "./helper-functions.js";
 createFooter()
 createAdminNavbar()
+const logoutbtn = document.getElementById("logout")
+logoutbtn.onclick=logout
