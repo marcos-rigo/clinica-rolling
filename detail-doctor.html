@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinica Rolling</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="js/proteccionDeRutas-comun.js"></script>
+</head>
+<body>
+  <header></header>
+  <main id="background-detail">
+      <div class="container my-5 " id="doctor-container">
+      </div>
+
+   <!-- Botón solicitar turno -->
+<!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="turn-modal">
+  
+</button> -->
+<div id="open-modal-container"></div>
+   <!-- Modal -->
+  <!--
+  
+  <div id="open-modal-container"></div>
+  <div class="modal fade" id="turn-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content modal-turno">
+        <div class="modal-header-turno">
+          <h5 class="modal-title" >Solicitá tu turno</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="turn-body">
+          <form onclick="pedirturno()">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="values-name-turn" placeholder="pepito" maxlength="50" required>
+              <label for="floatingInput">Nombre</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control" id="values-dni-turn" placeholder="Ingresá tu DNI" max="9" min="8" required>
+              <label for="floatingInput">DNI</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="values-email-turn" placeholder="name@example.com" maxlength="40" required>
+              <label for="floatingInput">EMAIL</label>
+            </div>
+               
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="values-obra-turn" placeholder="XX" max="120" min="16">
+              <label for="floatingInput">OBRA SOCIAL</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="values-motivo-turn" placeholder="XX" max="300" min="2" required>
+              <label for="floatingInput">MOTIVO DE LA CONSULTA</label>
+              <br>
+
+              <div form method="get" action="#">
+                <p>
+                  <label for="dwarfs">Elige un día</label>
+                  <select name="drawfs" id="drawfs">
+                    <option>Lunes</option>
+                    <option>Miercoles</option>
+                    <option>Viernes</option>
+                  </select>
+                </p>
+                <p>
+                  <label for="favoriteOnly">Elige un horario</label>
+                  <select name="favoriteOnly" id="favoriteOnly">
+                    <option>9:00</option>
+                    <option>9:20</option>
+                    <option>9:40</option>
+                    <option>10:00</option>
+                    <option>10:20</option>
+                    <option>10:40</option>
+                    <option>11:00</option>
+                    <option>11:20</option>
+                    <option>11:40</option>
+                    <option>12:00</option>
+                  </select>
+                </p>
+              </div>
+            <button type="submit" class="btn-modal-pedir-turno mt-4">Pedir Turno</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>  -->  
+  </main>
+  <footer></footer>
+  <script src="js//detail.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

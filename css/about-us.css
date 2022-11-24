@@ -1,0 +1,88 @@
+
+
+
+#portada-nosotros{
+    background-image: url(/assets/devs/portada-acercadenosotros.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#titulo-nosotros{
+    color: white;
+    text-align: left;
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+#titulo-secundario{
+        color: white;
+        text-align: left;
+        font-size: 1.5rem;
+        font-style: italic;
+        line-height: 1.5rem;
+        margin-bottom: 25px;
+}
+
+
+#caja-subtitulo{
+    width: 40vw;
+}
+
+#boton-team{
+    background-color: #8de5d8;
+    color: black;
+}
+
+
+
+/*** About ***/
+
+#titulo-cuadro-nosotros{
+    font-size: 2rem;
+}
+
+@media (min-width: 992px) {
+    .container.about {
+        max-width: 100% !important;
+    }
+
+    .about-text  {
+        padding-right: calc(((100% - 960px) / 2) + .75rem);
+    }
+}
+
+@media (min-width: 1200px) {
+    .about-text  {
+        padding-right: calc(((100% - 1140px) / 2) + .75rem);
+    }
+}
+
+@media (min-width: 1400px) {
+    .about-text  {
+        padding-right: calc(((100% - 1320px) / 2) + .75rem);
+    }
+}
+
+
+/*** Team ***/
+.team-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
+.team-item img {
+    border-radius: 8px 60px 0 0;
+}
+
+.team-item .team-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: #FFFFFF;
+    transition: .5s;
+}
