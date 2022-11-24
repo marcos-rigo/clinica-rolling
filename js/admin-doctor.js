@@ -21,6 +21,14 @@ class Doctor{
 // LEYENDO MEDICOS
 
   doctors.forEach(doctor => {
+    const turnosTotalesLunes = doctor.turnos['lunes'].length
+    const turnosTotalesMiercoles = doctor.turnos['miercoles'].length
+    const turnosTotalesViernes = doctor.turnos['viernes'].length
+    const turnosTotalesSemana = turnosTotalesLunes+turnosTotalesMiercoles+turnosTotalesViernes
+    const turnosOcupadosLunes= doctor.turnos["lunes"].filter(doc=>!doc.disponible).length
+    const turnosOcupadosMiercoles= doctor.turnos["miercoles"].filter(doc=>!doc.disponible).length
+    const turnosOcupadosViernes= doctor.turnos["viernes"].filter(doc=>!doc.disponible).length
+    const turnosTotalesOcupadosSemana = turnosOcupadosLunes+turnosOcupadosMiercoles+turnosOcupadosViernes
     const doctorRow =  document.createElement('tr'); 
     doctorRow.innerHTML = `
     <th scope="row">${doctor.id}</th>
@@ -31,8 +39,8 @@ class Doctor{
     <td><img src="${doctor.imagen}" class="img-admin"></img></td>
     <td>${doctor.telefono}</td>
     <td>${doctor.matricula}</td>
-    <td id="turnos-disponibles-${doctor.id}"></td>
-    <td id="turnos-ocupados-${doctor.id}" ></td>
+    <td id="turnos-disponibles-${doctor.id}">${turnosTotalesSemana}</td>
+    <td id="turnos-ocupados-${doctor.id}">${turnosTotalesOcupadosSemana}</td>
     <td>${doctor.publicado}</td>
     <td>
     <button class="btn btn-warning d-inline" data-bs-toggle="modal" data-bs-target="#modal-editar-medico" onclick="fillFields('${doctor.id}')">✏</button>
@@ -42,7 +50,7 @@ class Doctor{
     document.querySelector('tbody').appendChild(doctorRow);
   });
 
-  
+
 
 
   // AGREGANDO MEDICO
