@@ -63,24 +63,27 @@ const register = (e)=>{
   const email = document.getElementById('values-email').value;
   const password = document.getElementById('values-password').value;
   const password2 = document.getElementById('values-password-2').value;
+  const dni=parseFloat( document.getElementById('values-dni').value);
   const newId = new Date().getTime();
-  const newUser = new User( newId, name, age, email, password, false)
-  if(validateFieldsRegister(name, age, email, password, password2)){
+  const newUser = new User( newId, name, age, email, password, false,dni)
+  if(validateFieldsRegister(name, age,dni, email, password, password2)){
    
     const usersLS = JSON.parse(localStorage.getItem('users'));
     usersLS.push(newUser);
     localStorage.setItem('users',JSON.stringify(usersLS))
+    localStorage.setItem('userInfo',JSON.stringify(newUser))
     window.location.assign(window.location.origin + '/home.html');
   }else{
-    alertMessage('El formato es inválido','#register-body')
+    alertMessage('UPS ha ocurrido un error con tus validaciones','#register-body')
   }
 }
 
-const validateFieldsRegister = (name, age, email, password, password2)=>{
+const validateFieldsRegister = (name, age,dni, email, password, password2)=>{
   const nameOk = /^[a-zA-Z]*$/.test(name); 
   const ageOk = /^\d+$/.test(age);
+  const dniOk = /^[\d]{1,3}\.?[\d]{3,3}\.?[\d]{3,3}$/.test(dni);
   const emailOk = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
   const passOk =/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password) && password === password2
-  if(nameOk && ageOk && emailOk && passOk) return true
+  if(nameOk && ageOk && dniOk&&emailOk && passOk) return true
   else return false
 }
