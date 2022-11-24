@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/common.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -24,8 +25,11 @@
 <!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="turn-modal">
   
 </button> -->
-
+<div id="open-modal-container"></div>
    <!-- Modal -->
+  <!--
+  
+  <div id="open-modal-container"></div>
   <div class="modal fade" id="turn-modal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content modal-turno">
@@ -34,7 +38,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" id="turn-body">
-          <form onsubmit="(pedirturno)">
+          <form onclick="pedirturno()">
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="values-name-turn" placeholder="pepito" maxlength="50" required>
               <label for="floatingInput">Nombre</label>
@@ -47,10 +51,7 @@
               <input type="email" class="form-control" id="values-email-turn" placeholder="name@example.com" maxlength="40" required>
               <label for="floatingInput">EMAIL</label>
             </div>
-             <div class="form-floating mb-3">
-               <!-- <input type="text" class="form-control" id="values-date-turn" placeholder="XX" max="120" min="16" required>
-              <label for="floatingInput">Fecha y Hora del Turno</label>
-            </div> -->
+               
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="values-obra-turn" placeholder="XX" max="120" min="16">
               <label for="floatingInput">OBRA SOCIAL</label>
@@ -85,12 +86,12 @@
                   </select>
                 </p>
               </div>
-            <button type="submit" class="btn-modal-pedir-turno" mt-4">Pedir Turno</button>
+            <button type="submit" class="btn-modal-pedir-turno mt-4">Pedir Turno</button>
           </form>
         </div>
       </div>
     </div>
-  </div>   
+  </div>  -->  
   </main>
   <footer></footer>
   <script src="js//detail.js" type="module"></script>

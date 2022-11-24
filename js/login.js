@@ -1,11 +1,12 @@
 class User{
-  constructor(id,name, age, email, password, admin){
+  constructor(id,name, age, email, password, admin,dni){
     this.id = id
     this.name = name
     this.age = age
     this.email = email
     this.password = password,
     this.admin = admin
+    this.dni=dni
   }
 }
 const users= JSON.parse(localStorage.getItem('users'))
@@ -28,8 +29,8 @@ const users= JSON.parse(localStorage.getItem('users'))
 
 
 const login = (e)=>{
-   e.preventDefault();
-   const email = document.getElementById('values-email-login').value;
+  e.preventDefault();
+  const email = document.getElementById('values-email-login').value;
   const password = document.getElementById('values-password-login').value;
   const users= JSON.parse(localStorage.getItem('users'))
   const userFound = users.find(user=>user.email===email);
@@ -39,20 +40,26 @@ const login = (e)=>{
     window.location.assign(window.location.origin + '/home.html');
  
   }else{
-    alertMessage('credenciales invalidas','form')
+    alertMessage('Los datos ingresados no son correctos o no corresponden a un usuario de nuestra clinica.','#login-body')
   }
 }
 
 function alertMessage (message,queryContainer){
   let alertMessage = document.createElement('div'); 
-  alertMessage.classList.add('alert','alert-danger','mt-3');
+  alertMessage.classList.add('alert','alert-danger','mt-3',"d-flex","align-items-center");
   alertMessage.setAttribute('role','alert');
-  alertMessage.innerText = message;
+  alertMessage.innerHTML =`  
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+  <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+</svg>
+  <div>
+    ${message}
+  </div>` ;
   let container= document.querySelector(queryContainer);
   container.appendChild(alertMessage);
   setTimeout(()=>{
     alertMessage.remove()
-  },2000)
+  },2500)
 }
 
 const register = (e)=>{
@@ -62,81 +69,27 @@ const register = (e)=>{
   const email = document.getElementById('values-email').value;
   const password = document.getElementById('values-password').value;
   const password2 = document.getElementById('values-password-2').value;
+  const dni=parseFloat( document.getElementById('values-dni').value);
   const newId = new Date().getTime();
-  const newUser = new User( newId, name, age, email, password, false)
-  if(validateFieldsRegister(name, age, email, password, password2)){
+  const newUser = new User( newId, name, age, email, password, false,dni)
+  if(validateFieldsRegister(name, age,dni, email, password, password2)){
    
     const usersLS = JSON.parse(localStorage.getItem('users'));
     usersLS.push(newUser);
     localStorage.setItem('users',JSON.stringify(usersLS))
+    localStorage.setItem('userInfo',JSON.stringify(newUser))
     window.location.assign(window.location.origin + '/home.html');
   }else{
-    alertMessage('El formato es inválido','#register-body')
+    alertMessage('¡UPS! ha ocurrido un error en alguno de los campos, por favor checkealo.','#register-body')
   }
 }
 
-const validateFieldsRegister = (name, age, email, password, password2)=>{
+const validateFieldsRegister = (name, age,dni, email, password, password2)=>{
   const nameOk = /^[a-zA-Z]*$/.test(name); 
   const ageOk = /^\d+$/.test(age);
+  const dniOk = /^[\d]{1,3}\.?[\d]{3,3}\.?[\d]{3,3}$/.test(dni);
   const emailOk = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
   const passOk =/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password) && password === password2
-  if(nameOk && ageOk && emailOk && passOk) return true
+  if(nameOk && ageOk && dniOk&&emailOk && passOk) return true
   else return false
 }
-
-
-//EXPRESION REGULAR PARA CONTRASEÑA DE AL MENOS UN NUMERO Y AL MENOS UNA LETRA (MIN 8) 
-// ^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$
-//EMAIL
-///^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-/**
- * 1- <div></div>
- * 2- <div class="alert alert-danger mt-3"></div>
- * 3- <div class="alert alert-danger mt-3" role="alert"></div>
- * 4- <div class="alert alert-danger mt-3" role="alert"> message </div>
- */
-
-//  new Date().getTime() --> Con el objeto de fechas te crea un timestamp --> La cantidad de milisegundos que pasaron desde el 1ro de enero
-// de 1970 hasta el dia de hoy
-
-//! FORMA AVANZADA PARA VALIDAR CAMPOS EN FORMULARIO
-// const register = (e)=>{
-//   e.preventDefault();
-//   const name = document.getElementById('values-name').value;
-//   const age = document.getElementById('values-age').value;
-//   const email = document.getElementById('values-email').value;
-//   const password = document.getElementById('values-password').value;
-//   const password2 = document.getElementById('values-password-2').value;
-//   const newId = new Date().getTime();
-//   const newUser = new User( newId, name, age, email, password, false);
-//   const errors = validateFieldsRegister(name, age, email, password, password2)
-//   if(Object.keys(errors).length===0){
-//     // ACTUALIZACIÓN EN LS
-//     const usersLS = JSON.parse(localStorage.getItem('users'));
-//     usersLS.push(newUser);
-//     localStorage.setItem('users',JSON.stringify(usersLS))
-//     window.location.assign(window.location.origin + '/carrito.html');
-//   }else{
-//     Object.values(errors).map(error=>{
-//       alertMessage(error,'#register-body')
-//     })
-//   }
-// }
-
-// const validateFieldsRegister = (name, age, email, password, password2)=>{
-//   let errors = {};
-//   const nameOk = /^[a-zA-Z]*$/.test(name); 
-//   if(!nameOk) errors.name = 'El nombre ha sido escrito mal'
-//   const ageOk = /^\d+$/.test(age);
-//   if(!ageOk) errors.age = 'La edad ha sido escrita mal'
-//   const emailOk = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-//   if(!emailOk) errors.email = 'email ha sido escrita mal'
-//   const passOk =/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password) && password === password2
-//   if(!passOk) errors.password = 'password ha sido escrita mal'
-//   return errors
-// }
-// // {
-  
-// // }
-// // Object.keys(errores) []
-// // Object.values(errores) ['hola','chau']
