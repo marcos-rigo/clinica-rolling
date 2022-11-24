@@ -40,20 +40,26 @@ const login = (e)=>{
     window.location.assign(window.location.origin + '/home.html');
  
   }else{
-    alertMessage('credenciales invalidas','#login-body')
+    alertMessage('Los datos ingresados no son correctos o no corresponden a un usuario de nuestra clinica.','#login-body')
   }
 }
 
 function alertMessage (message,queryContainer){
   let alertMessage = document.createElement('div'); 
-  alertMessage.classList.add('alert','alert-danger','mt-3');
+  alertMessage.classList.add('alert','alert-danger','mt-3',"d-flex","align-items-center");
   alertMessage.setAttribute('role','alert');
-  alertMessage.innerText = message;
+  alertMessage.innerHTML =`  
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+  <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+</svg>
+  <div>
+    ${message}
+  </div>` ;
   let container= document.querySelector(queryContainer);
   container.appendChild(alertMessage);
   setTimeout(()=>{
     alertMessage.remove()
-  },2000)
+  },2500)
 }
 
 const register = (e)=>{
@@ -74,7 +80,7 @@ const register = (e)=>{
     localStorage.setItem('userInfo',JSON.stringify(newUser))
     window.location.assign(window.location.origin + '/home.html');
   }else{
-    alertMessage('UPS ha ocurrido un error con tus validaciones','#register-body')
+    alertMessage('¡UPS! ha ocurrido un error en alguno de los campos, por favor checkealo.','#register-body')
   }
 }
 
