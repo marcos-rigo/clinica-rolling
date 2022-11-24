@@ -1,12 +1,16 @@
-body{
+.bg-clinica{
     background-color: #8DE5D8;
+}
+
+main{
+    background-color: #ecfaf8;
 }
 h1{
     text-align: center;
     color: #117C6F;
     font-style: oblique;
 }
-h3{
+h3, .p-contact{
     color: #117C6F;
     font-style: oblique;
 }
@@ -23,4 +27,11 @@ form{
     border-radius: 10px;
     box-sizing: border-box;
     padding: 10px;
+}
+.p-contact{
+    font-size: 3rem;
+}
+
+.btn-clinica{
+    background-color: #117C6F;
 }
