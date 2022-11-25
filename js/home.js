@@ -9,8 +9,18 @@ if(userLogged.admin){
 createFooter()
 const logoutbtn = document.getElementById("logout")
 logoutbtn.onclick=logout
-
-doctors.forEach(doctor=> {
+const doctoresOrdenados=doctors.sort(function (a, b) {
+    if (a.name > b.name) {
+      return 1;
+    }
+    if (a.name < b.name) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
+  });
+console.log(doctoresOrdenados);
+doctoresOrdenados.forEach(doctor=> {
     if(doctor.publicado){
         const cardsDiv=document.createElement("div")
         cardsDiv.classList.add("card-group", "row","mx-auto","card-effect")
