@@ -181,9 +181,9 @@ modalTurno.innerHTML=`
           <p>
             <label for="favoriteOnly">Elige un horario</label>
             <select name="favoriteOnly" id="values-hora-turn">
-              <option>9:00</option>
-              <option>9:20</option>
-              <option>9:40</option>
+              <option>09:00</option>
+              <option>09:20</option>
+              <option>09:40</option>
               <option>10:00</option>
               <option>10:20</option>
               <option>10:40</option>
